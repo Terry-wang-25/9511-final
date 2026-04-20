@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据分析 — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <div class="container">
+      <a href="主页面.html">首页</a><span>/</span>数据分析
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>租房纠纷数据分析</h1>
+      <p>基于平台数据的统计与趋势分析，帮助了解租房市场现状</p>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <div class="container">
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true">总览</button>
+        <button class="tab" role="tab" aria-selected="false">按类型</button>
+        <button class="tab" role="tab" aria-selected="false">按地区</button>
+        <button class="tab" role="tab" aria-selected="false">趋势</button>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value">2,847</div>
+          <div class="stat-label">2026年总投诉量</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">78%</div>
+          <div class="stat-label">解决率</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">12天</div>
+          <div class="stat-label">平均处理时间</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4.2/5</div>
+          <div class="stat-label">用户满意度</div>
+        </div>
+      </div>
+
+      <h2>投诉类型分布</h2>
+      <table class="data-table" style="margin-bottom:2.5rem;">
+        <thead>
+          <tr>
+            <th>投诉类型</th>
+            <th>数量</th>
+            <th>占比</th>
+            <th>同比变化</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>押金退还</td>
+            <td>892</td>
+            <td>31.3%</td>
+            <td><span style="color:var(--color-error);">↑ 8.2%</span></td>
+          </tr>
+          <tr>
+            <td>维修与居住条件</td>
+            <td>654</td>
+            <td>23.0%</td>
+            <td><span style="color:var(--color-error);">↑ 3.1%</span></td>
+          </tr>
+          <tr>
+            <td>租金争议</td>
+            <td>498</td>
+            <td>17.5%</td>
+            <td><span style="color:var(--color-error);">↑ 12.5%</span></td>
+          </tr>
+          <tr>
+            <td>租约纠纷</td>
+            <td>341</td>
+            <td>12.0%</td>
+            <td><span style="color:var(--color-success);">↓ 2.3%</span></td>
+          </tr>
+          <tr>
+            <td>驱逐相关</td>
+            <td>267</td>
+            <td>9.4%</td>
+            <td><span style="color:var(--color-success);">↓ 5.1%</span></td>
+          </tr>
+          <tr>
+            <td>其他</td>
+            <td>195</td>
+            <td>6.8%</td>
+            <td><span style="color:var(--color-success);">↓ 1.8%</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-grid card-grid-2">
+        <div class="card">
+          <h3>投诉量月度趋势</h3>
+          <div style="height:200px; background:var(--color-bg-light); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; color:var(--color-text-muted); margin-top:0.75rem;">
+            [图表区域 — 柱状图/折线图]
+          </div>
+        </div>
+        <div class="card">
+          <h3>处理时效分布</h3>
+          <div style="height:200px; background:var(--color-bg-light); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; color:var(--color-text-muted); margin-top:0.75rem;">
+            [图表区域 — 饼图/环形图]
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. 保留所有权利。</span>
+        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+

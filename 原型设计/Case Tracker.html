@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Tracker — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="主页面.html">Home</a><span>/</span>Case tracker
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h1>Case tracker</h1>
+          <p>View and manage all submitted cases</p>
+        </div>
+        <a href="任务 2 的主页面.html" class="btn btn-primary">Submit a new claim</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <div class="container">
+
+      <div class="tabs" role="tablist" style="margin-bottom:1.5rem;">
+        <button class="tab active" role="tab" data-filter="all">All</button>
+        <button class="tab" role="tab" data-filter="in_progress">In progress</button>
+        <button class="tab" role="tab" data-filter="resolved">Resolved</button>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Case number</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Submitted date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="case-tracker-body">
+          <tr data-status-group="in_progress">
+            <td><strong>#CR-2026-0042</strong></td>
+            <td>Deposit refund</td>
+            <td>Landlord deducted deposit for unreasonable reasons after move-out</td>
+            <td>2026-04-02</td>
+            <td><span class="badge badge-warning">Under review</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="in_progress">
+            <td><strong>#CR-2026-0038</strong></td>
+            <td>Repair request</td>
+            <td>Hot water system was not repaired for over 2 weeks</td>
+            <td>2026-03-20</td>
+            <td><span class="badge badge-info">Processing</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="resolved">
+            <td><strong>#CR-2026-0031</strong></td>
+            <td>Rent dispute</td>
+            <td>Rent increase exceeded the legal limit</td>
+            <td>2026-03-05</td>
+            <td><span class="badge badge-success">Resolved</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="resolved">
+            <td><strong>#CR-2025-0128</strong></td>
+            <td>Deposit refund</td>
+            <td>Deposit refund delayed beyond the legal timeframe</td>
+            <td>2025-12-15</td>
+            <td><span class="badge badge-success">Resolved</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="resolved">
+            <td><strong>#CR-2025-0115</strong></td>
+            <td>Lease dispute</td>
+            <td>Contract contained unfair terms</td>
+            <td>2025-11-22</td>
+            <td><span class="badge badge-success">Resolved</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="in_progress">
+            <td><strong>#CR-2025-0109</strong></td>
+            <td>Lease dispute</td>
+            <td>Landlord terminated the lease early without valid basis</td>
+            <td>2025-10-30</td>
+            <td><span class="badge badge-info">Processing</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+          <tr data-status-group="resolved">
+            <td><strong>#CR-2025-0096</strong></td>
+            <td>Repair request</td>
+            <td>Bathroom leak resolved and case closed</td>
+            <td>2025-09-18</td>
+            <td><span class="badge badge-success">Resolved</span></td>
+            <td><a href="#" class="case-view-detail">View details</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <nav class="pagination" aria-label="Case pagination" id="case-pagination">
+        <a href="#" id="case-page-prev">Previous</a>
+        <span id="case-page-numbers"></span>
+        <a href="#" id="case-page-next">Next →</a>
+      </nav>
+    </div>
+  </main>
+
+  <div id="case-detail-modal" class="overlay-backdrop" style="display:none;">
+    <div class="overlay-panel" style="max-width:560px;">
+      <div class="overlay-header">
+        <h2>Case details</h2>
+        <button type="button" id="case-detail-close" class="overlay-close" aria-label="Close">×</button>
+      </div>
+      <div class="overlay-body" id="case-detail-body"></div>
+      <div class="overlay-footer">
+        <button type="button" id="case-detail-confirm" class="btn btn-primary btn-sm">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. All rights reserved.</span>
+        <div><a href="#">Privacy policy</a><a href="#">Terms of use</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    const rows = Array.from(document.querySelectorAll("#case-tracker-body tr"));
+    const tabs = Array.from(document.querySelectorAll(".tabs .tab"));
+    const pageNumbersWrap = document.getElementById("case-page-numbers");
+    const prevBtn = document.getElementById("case-page-prev");
+    const nextBtn = document.getElementById("case-page-next");
+    const detailLinks = Array.from(document.querySelectorAll(".case-view-detail"));
+    const detailModal = document.getElementById("case-detail-modal");
+    const detailBody = document.getElementById("case-detail-body");
+    const detailClose = document.getElementById("case-detail-close");
+    const detailConfirm = document.getElementById("case-detail-confirm");
+
+    const pageSize = 4;
+    let currentFilter = "all";
+    let currentPage = 1;
+    let filteredRows = [...rows];
+
+    const getFilteredRows = () => {
+      if (currentFilter === "all") return [...rows];
+      return rows.filter((row) => row.dataset.statusGroup === currentFilter);
+    };
+
+    const getTotalPages = () => Math.max(1, Math.ceil(filteredRows.length / pageSize));
+
+    const renderPagination = () => {
+      const totalPages = getTotalPages();
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      pageNumbersWrap.innerHTML = "";
+      for (let i = 1; i <= totalPages; i += 1) {
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = String(i);
+        if (i === currentPage) link.classList.add("current");
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentPage = i;
+          render();
+        });
+        pageNumbersWrap.appendChild(link);
+      }
+
+      prevBtn.style.opacity = currentPage === 1 ? "0.45" : "1";
+      nextBtn.style.opacity = currentPage === totalPages ? "0.45" : "1";
+    };
+
+    const renderRows = () => {
+      rows.forEach((row) => {
+        row.style.display = "none";
+      });
+      const start = (currentPage - 1) * pageSize;
+      const end = start + pageSize;
+      filteredRows.slice(start, end).forEach((row) => {
+        row.style.display = "";
+      });
+    };
+
+    const render = () => {
+      filteredRows = getFilteredRows();
+      renderRows();
+      renderPagination();
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((t) => t.classList.remove("active"));
+        tab.classList.add("active");
+        currentFilter = tab.dataset.filter || "all";
+        currentPage = 1;
+        render();
+      });
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (currentPage > 1) {
+        currentPage -= 1;
+        render();
+      }
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (currentPage < getTotalPages()) {
+        currentPage += 1;
+        render();
+      }
+    });
+
+    const openDetailModal = (row) => {
+      const cells = row.querySelectorAll("td");
+      const caseNo = cells[0]?.innerText.trim() || "-";
+      const type = cells[1]?.innerText.trim() || "-";
+      const desc = cells[2]?.innerText.trim() || "-";
+      const date = cells[3]?.innerText.trim() || "-";
+      const status = cells[4]?.innerText.trim() || "-";
+      detailBody.innerHTML = `
+        <table style="width:100%; font-size:0.95rem;">
+          <tr><td style="padding:0.4rem 0; color:var(--color-text-muted); width:120px;">Case number</td><td>${caseNo}</td></tr>
+          <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Type</td><td>${type}</td></tr>
+          <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Description</td><td>${desc}</td></tr>
+          <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Submitted date</td><td>${date}</td></tr>
+          <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Status</td><td>${status}</td></tr>
+        </table>
+      `;
+      detailModal.style.display = "flex";
+    };
+
+    const closeDetailModal = () => {
+      detailModal.style.display = "none";
+    };
+
+    detailLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const row = link.closest("tr");
+        if (row) openDetailModal(row);
+      });
+    });
+
+    detailClose.addEventListener("click", closeDetailModal);
+    detailConfirm.addEventListener("click", closeDetailModal);
+    detailModal.addEventListener("click", (e) => {
+      if (e.target === detailModal) closeDetailModal();
+    });
+
+    render();
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新闻公告 — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <div class="container">
+      <a href="主页面.html">首页</a><span>/</span>新闻公告
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Latest NSW Fair Trading updates</h1>
+      <p>Filter results and browse detailed updates from the regulator.</p>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="news-directory">
+        <aside class="news-filters">
+          <h3>Filter results</h3>
+          <div class="filter-group">
+            <div class="filter-title">Keyword</div>
+            <input id="filter-keyword" class="date-input" type="text" placeholder="Search keyword">
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Article type</div>
+            <label class="filter-check"><input type="checkbox" name="filter-article-type" value="ministerial"> Ministerial media releases</label>
+            <label class="filter-check"><input type="checkbox" name="filter-article-type" value="departmental"> Departmental releases</label>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Notice type</div>
+            <label class="filter-check"><input type="checkbox" name="filter-notice-type" value="prosecution"> Prosecution</label>
+            <label class="filter-check"><input type="checkbox" name="filter-notice-type" value="disciplinary"> Disciplinary action</label>
+            <label class="filter-check"><input type="checkbox" name="filter-notice-type" value="warning"> Public warning</label>
+            <label class="filter-check"><input type="checkbox" name="filter-notice-type" value="legislation"> Legislation change</label>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Topic</div>
+            <label class="filter-check"><input type="checkbox" name="filter-topic" value="automotive"> Automotive</label>
+            <label class="filter-check"><input type="checkbox" name="filter-topic" value="consumer-protection"> Consumer protection</label>
+            <label class="filter-check"><input type="checkbox" name="filter-topic" value="real-estate"> Real estate, housing and property</label>
+            <label class="filter-check"><input type="checkbox" name="filter-topic" value="rental"> Rental</label>
+            <label class="filter-check"><input type="checkbox" name="filter-topic" value="strata"> Strata</label>
+          </div>
+          <div class="filter-group">
+            <div class="filter-title">Dates</div>
+            <label class="filter-check" style="display:block;">From</label>
+            <input id="filter-from" class="date-input" type="date" style="margin-bottom:0.55rem;">
+            <label class="filter-check" style="display:block;">To</label>
+            <input id="filter-to" class="date-input" type="date">
+          </div>
+          <div class="news-filters-actions">
+            <button id="apply-filters" class="btn btn-primary btn-sm" type="button">Apply filters</button>
+            <button id="clear-filters" class="btn btn-outline btn-sm" type="button">Clear all</button>
+          </div>
+        </aside>
+
+        <div>
+          <div class="news-results-header">
+            <span id="news-results-count">Showing 1-2 of 217 results</span>
+          </div>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="prosecution" data-topic="automotive" data-date="2026-04-12">
+            <div>
+              <div class="updates-kicker">Ministerial media release</div>
+              <div class="updates-date">12 April 2026</div>
+              <h2 class="news-result-title"><a href="news-bowser-busters.html">Bowser busters blitzing petrol stations across NSW</a></h2>
+              <p class="news-result-desc">NSW motorists have wasted no time stepping up as Bowser Busters, with consumer intelligence now turbocharging NSW Fair Trading's fairer fuel price compliance blitz.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=300&h=180&fit=crop" alt="Fuel pump compliance check">
+          </article>
+
+          <article class="news-result-item" data-article-type="departmental" data-notice-type="disciplinary" data-topic="automotive" data-date="2026-04-08">
+            <div>
+              <div class="updates-kicker">Disciplinary action</div>
+              <div class="updates-date">8 April 2026</div>
+              <h2 class="news-result-title"><a href="news-jonathan-doyle.html">Tow truck driver Johnathan Doyle Baikie disqualified</a></h2>
+              <p class="news-result-desc">Johnathan Doyle Baikie has been reprimanded and disqualified from holding a tow truck licence or drivers certificate for 3 years and 6 months.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1619405399517-d7fce0f13302?w=300&h=180&fit=crop" alt="Tow truck disciplinary action">
+          </article>
+
+          <article class="news-result-item" data-article-type="departmental" data-notice-type="disciplinary" data-topic="automotive" data-date="2026-04-07">
+            <div>
+              <div class="updates-kicker">Disciplinary action</div>
+              <div class="updates-date">7 April 2026</div>
+              <h2 class="news-result-title"><a href="news-brett-shearer.html">Tow truck driver Brett David Shearer disqualified for 3 years</a></h2>
+              <p class="news-result-desc">Brett David Shearer has been reprimanded and disqualified from holding a tow truck licence or drivers certificate for 3 years.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&h=180&fit=crop" alt="Transport compliance notice">
+          </article>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="legislation" data-topic="consumer-protection" data-date="2026-04-05">
+            <div>
+              <div class="updates-kicker">Ministerial media release</div>
+              <div class="updates-date">5 April 2026</div>
+              <h2 class="news-result-title"><a href="news-fuelcheck-boost.html">FuelCheck to receive $2.2 million boost as fuel transparency compliance blitzes surge</a></h2>
+              <p class="news-result-desc">The Minns Labor Government will inject $2.2 million to upgrade FuelCheck and help the people of NSW manage cost-of-living pressures as compliance activity ramps up.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=300&h=180&fit=crop" alt="Fuel transparency program">
+          </article>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="warning" data-topic="consumer-protection" data-date="2026-04-02">
+            <div>
+              <div class="updates-kicker">Ministerial media release</div>
+              <div class="updates-date">2 April 2026</div>
+              <h2 class="news-result-title"><a href="news-showbag-safety.html">Showbag safety checks completed for 2026 Sydney Royal Easter Show</a></h2>
+              <p class="news-result-desc">Sydney Royal Easter Show visitors can hop on into the showbag pavilion this year knowing that the goodies, toys and treats on offer have been checked by NSW Fair Trading.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=300&h=180&fit=crop" alt="Easter show safety inspections">
+          </article>
+
+          <article class="news-result-item" data-article-type="departmental" data-notice-type="disciplinary" data-topic="real-estate" data-date="2026-04-02">
+            <div>
+              <div class="updates-kicker">Disciplinary action</div>
+              <div class="updates-date">2 April 2026</div>
+              <h2 class="news-result-title"><a href="news-jonathan-doyle.html">Ten-year ban for Joshua Tesolin and Tesolin Consulting Pty Ltd following serious misconduct</a></h2>
+              <p class="news-result-desc">Joshua James Tesolin has been disqualified for 10 years from being involved in the management or operation of a licensed real estate business.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=180&fit=crop" alt="Regulatory disciplinary outcome">
+          </article>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="legislation" data-topic="consumer-protection" data-date="2026-04-01">
+            <div>
+              <div class="updates-kicker">Legislation change</div>
+              <div class="updates-date">1 April 2026</div>
+              <h2 class="news-result-title"><a href="news-bowser-busters.html">Harmonisation reforms for charities and fundraisers</a></h2>
+              <p class="news-result-desc">Learn about the harmonisation reforms introduced for charities and fundraisers operating in NSW that apply from 1 April 2026.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=300&h=180&fit=crop" alt="Policy harmonisation update">
+          </article>
+
+          <article class="news-result-item" data-article-type="departmental" data-notice-type="legislation" data-topic="consumer-protection" data-date="2026-04-01">
+            <div>
+              <div class="updates-kicker">Departmental release</div>
+              <div class="updates-date">1 April 2026</div>
+              <h2 class="news-result-title"><a href="news-fuelcheck-boost.html">NSW fundraising reforms bring state into line with national standards</a></h2>
+              <p class="news-result-desc">Significant changes will streamline the regulation of charitable fundraising and harmonise NSW laws with the Australian Charities and Not-for-profits Commission framework.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=300&h=180&fit=crop" alt="Fundraising reform">
+          </article>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="legislation" data-topic="rental" data-date="2026-03-23">
+            <div>
+              <div class="updates-kicker">Ministerial media release</div>
+              <div class="updates-date">23 March 2026</div>
+              <h2 class="news-result-title"><a href="news-showbag-safety.html">Smart Rental Bonds set to give renters cost-of-living relief by allowing transfer of rental bonds</a></h2>
+              <p class="news-result-desc">Renters if a block at the Minns Labor Government's Smart Rental Bonds system is here, as testing kicks off ahead of its launch in mid-2026.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=300&h=180&fit=crop" alt="Rental bond reform">
+          </article>
+
+          <article class="news-result-item" data-article-type="ministerial" data-notice-type="warning" data-topic="automotive" data-date="2026-03-20">
+            <div>
+              <div class="updates-kicker">Ministerial media release</div>
+              <div class="updates-date">20 March 2026</div>
+              <h2 class="news-result-title"><a href="news-brett-shearer.html">NSW cracks down on misleading fuel prices with statewide compliance blitz</a></h2>
+              <p class="news-result-desc">The Minns Labor Government has fast-tracked a statewide fuel compliance blitz to strengthen fuel price transparency and protect motorists from misleading prices.</p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=300&h=180&fit=crop" alt="Statewide fuel compliance blitz">
+          </article>
+
+          <nav class="news-results-pagination" aria-label="News pages" id="news-pagination">
+            <a href="?page=1" aria-label="previous page" class="news-page-prev">‹</a>
+            <a href="?page=1" class="news-page-link" data-page="1">1</a>
+            <a href="?page=2" class="news-page-link" data-page="2">2</a>
+            <a href="?page=3" class="news-page-link" data-page="3">3</a>
+            <a href="?page=4" class="news-page-link" data-page="4">4</a>
+            <a href="?page=5" class="news-page-link" data-page="5">5</a>
+            <a href="?page=2" aria-label="next page" class="news-page-next">›</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. 保留所有权利。</span>
+        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    const items = Array.from(document.querySelectorAll(".news-result-item"));
+    const perPage = 2;
+    const maxPageButtons = 5;
+    let currentPage = 1;
+    let filteredItems = [...items];
+
+    const countText = document.getElementById("news-results-count");
+    const pageLinks = Array.from(document.querySelectorAll(".news-page-link"));
+    const prevBtn = document.querySelector(".news-page-prev");
+    const nextBtn = document.querySelector(".news-page-next");
+
+    const keywordInput = document.getElementById("filter-keyword");
+    const fromInput = document.getElementById("filter-from");
+    const toInput = document.getElementById("filter-to");
+    const applyBtn = document.getElementById("apply-filters");
+    const clearBtn = document.getElementById("clear-filters");
+
+    const getCheckedValues = (name) =>
+      Array.from(document.querySelectorAll(`input[name='${name}']:checked`)).map((el) => el.value);
+
+    const parseDate = (value) => {
+      if (!value) return null;
+      const date = new Date(value);
+      return Number.isNaN(date.getTime()) ? null : date;
+    };
+
+    const getTotalPages = () => Math.max(1, Math.min(maxPageButtons, Math.ceil(filteredItems.length / perPage)));
+
+    const render = () => {
+      const totalPages = getTotalPages();
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      const start = (currentPage - 1) * perPage;
+      const end = start + perPage;
+
+      items.forEach((item) => (item.style.display = "none"));
+      filteredItems.slice(start, end).forEach((item) => (item.style.display = "grid"));
+
+      const from = filteredItems.length ? start + 1 : 0;
+      const to = filteredItems.length ? Math.min(end, filteredItems.length) : 0;
+      countText.textContent = `Showing ${from}-${to} of ${filteredItems.length} results`;
+
+      pageLinks.forEach((link, idx) => {
+        const pageNum = idx + 1;
+        if (pageNum <= totalPages) {
+          link.style.display = "inline";
+          link.classList.toggle("current", pageNum === currentPage);
+          link.href = `?page=${pageNum}`;
+        } else {
+          link.style.display = "none";
+        }
+      });
+
+      prevBtn.style.opacity = currentPage === 1 ? "0.35" : "1";
+      nextBtn.style.opacity = currentPage === totalPages ? "0.35" : "1";
+    };
+
+    const applyFilters = () => {
+      const keyword = keywordInput.value.trim().toLowerCase();
+      const articleTypes = getCheckedValues("filter-article-type");
+      const noticeTypes = getCheckedValues("filter-notice-type");
+      const topics = getCheckedValues("filter-topic");
+      const fromDate = parseDate(fromInput.value);
+      const toDate = parseDate(toInput.value);
+
+      filteredItems = items.filter((item) => {
+        const text = item.textContent.toLowerCase();
+        if (keyword && !text.includes(keyword)) return false;
+
+        const articleType = item.dataset.articleType || "";
+        if (articleTypes.length && !articleTypes.includes(articleType)) return false;
+
+        const noticeType = item.dataset.noticeType || "";
+        if (noticeTypes.length && !noticeTypes.includes(noticeType)) return false;
+
+        const topic = item.dataset.topic || "";
+        if (topics.length && !topics.includes(topic)) return false;
+
+        const itemDate = parseDate(item.dataset.date);
+        if (fromDate && itemDate && itemDate < fromDate) return false;
+        if (toDate && itemDate && itemDate > toDate) return false;
+
+        return true;
+      });
+
+      currentPage = 1;
+      render();
+    };
+
+    applyBtn.addEventListener("click", applyFilters);
+    clearBtn.addEventListener("click", () => {
+      keywordInput.value = "";
+      fromInput.value = "";
+      toInput.value = "";
+      document.querySelectorAll("input[type='checkbox']").forEach((cb) => (cb.checked = false));
+      filteredItems = [...items];
+      currentPage = 1;
+      render();
+    });
+
+    pageLinks.forEach((link, idx) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentPage = idx + 1;
+        render();
+      });
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (currentPage > 1) {
+        currentPage -= 1;
+        render();
+      }
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (currentPage < getTotalPages()) {
+        currentPage += 1;
+        render();
+      }
+    });
+
+    render();
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+
+
+

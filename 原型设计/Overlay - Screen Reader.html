@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Reader Support — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <div class="overlay-backdrop">
+    <div class="overlay-panel overlay-panel--screen-reader">
+      <div class="overlay-header">
+        <h2>Accessibility and Screen Readers</h2>
+        <a href="主页面.html" class="overlay-close" aria-label="Close">×</a>
+      </div>
+      <div class="overlay-body">
+        <p style="color:var(--color-text-secondary); margin-bottom:1.5rem;">Consumer Rights is committed to an accessible experience for all users. Below is an overview of our accessibility features.</p>
+
+        <h3>Screen Reader Compatibility</h3>
+        <p>This website supports the following screen readers:</p>
+        <ul style="margin-left:1.5rem; margin-bottom:1.25rem; line-height:2;">
+          <li><strong>NVDA</strong> — Free screen reader for Windows</li>
+          <li><strong>JAWS</strong> — Professional screen reader for Windows</li>
+          <li><strong>VoiceOver</strong> — Built-in on macOS / iOS</li>
+          <li><strong>TalkBack</strong> — Built-in on Android</li>
+        </ul>
+
+        <h3>Keyboard Navigation</h3>
+        <div class="card" style="margin-bottom:1.25rem;">
+          <table style="width:100%; font-size:0.9rem;">
+            <tr><td style="padding:0.35rem 0; width:120px;"><kbd style="background:var(--color-bg-light); padding:0.15rem 0.5rem; border-radius:3px; border:1px solid var(--color-border);">Tab</kbd></td><td>Move to the next interactive element</td></tr>
+            <tr><td style="padding:0.35rem 0;"><kbd style="background:var(--color-bg-light); padding:0.15rem 0.5rem; border-radius:3px; border:1px solid var(--color-border);">Shift+Tab</kbd></td><td>Move to the previous interactive element</td></tr>
+            <tr><td style="padding:0.35rem 0;"><kbd style="background:var(--color-bg-light); padding:0.15rem 0.5rem; border-radius:3px; border:1px solid var(--color-border);">Enter</kbd></td><td>Activate a link or button</td></tr>
+            <tr><td style="padding:0.35rem 0;"><kbd style="background:var(--color-bg-light); padding:0.15rem 0.5rem; border-radius:3px; border:1px solid var(--color-border);">Esc</kbd></td><td>Close dialogs or menus</td></tr>
+          </table>
+        </div>
+
+        <h3>Other Accessibility Settings</h3>
+        <ul style="list-style:none; margin-bottom:1rem;">
+          <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-border-light);">
+            <a href="Overlay - Font Size.html">📝 Font Size Adjustment</a>
+          </li>
+          <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-border-light);">
+            <a href="Overlay - High Contrast.html">🎨 High Contrast Mode</a>
+          </li>
+          <li style="padding:0.5rem 0; border-bottom:1px solid var(--color-border-light);">
+            <a href="Overlay - Reading Ruler.html">📏 Reading Ruler</a>
+          </li>
+          <li style="padding:0.5rem 0;">
+            <a href="Overlay - Language.html">🌐 Language Switch</a>
+          </li>
+        </ul>
+
+        <div class="alert alert-info" style="margin-bottom:0;">
+          <strong>Feedback:</strong> If you encounter any issue while using assistive technology, please <a href="Contact.html">contact us</a> and we will fix it as soon as possible.
+        </div>
+      </div>
+      <div class="overlay-footer">
+        <a href="主页面.html" class="btn btn-primary btn-sm">Close</a>
+      </div>
+    </div>
+  </div>
+
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+
+
+

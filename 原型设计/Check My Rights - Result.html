@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Suggested Next Steps</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+  
+
+  <main class="page-content">
+    <div class="container">
+      <div style="max-width:820px; margin:0 auto;">
+        <h1>Your Suggested Next Steps</h1>
+        <p style="color:var(--color-text-secondary);">Based on your answers, here is what you can do next.</p>
+
+        <div class="card" style="margin-top:1rem;">
+          <h2 style="font-size:1.3rem;">Recommendation</h2>
+          <ul id="recommendations" style="margin:1rem 0 0 1.25rem; line-height:2;"></ul>
+        </div>
+
+        <div class="card" style="margin-top:1rem;">
+          <h2 style="font-size:1.1rem;">Your Answers</h2>
+          <ul id="answer-summary" style="margin:1rem 0 0 1.25rem; line-height:1.9;"></ul>
+        </div>
+
+        <div style="display:flex; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap;">
+          <a href="任务 1 主页面.html" class="btn btn-primary">Use our claim template</a>
+          <a href="Contact.html" class="btn btn-secondary">Contact support</a>
+          <a href="Check My Rights - Page 1.html" class="btn btn-outline">Start again</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const answers = JSON.parse(localStorage.getItem("consumerRightsAnswers") || "{}");
+    const rec = [];
+    const summary = [];
+
+    const labels = {
+      q1: {
+        faulty: "The product is faulty or damaged",
+        not_delivered: "The item was not delivered",
+        different: "The item is different from what was described",
+        changed_mind: "I changed my mind / no longer want it"
+      },
+      q2: {
+        lt_7: "Less than 7 days ago",
+        "7_30": "7 to 30 days ago",
+        gt_30: "More than 30 days ago",
+        not_sure: "I am not sure"
+      },
+      q3: {
+        online: "Online",
+        in_store: "In-store",
+        phone: "Over the phone",
+        not_sure: "I am not sure"
+      },
+      q4: {
+        refused: "Yes, and they refused to help",
+        no_reply: "Yes, but I have not received a reply",
+        not_contacted: "No, not yet",
+        not_sure: "I am not sure what to say"
+      },
+      q5: {
+        refund: "A refund",
+        repair: "A repair",
+        replacement: "A replacement",
+        not_sure: "I am not sure, I just want help"
+      }
+    };
+
+    if (answers.q1 && answers.q2 && answers.q3 && answers.q4 && answers.q5) {
+      const isFaulty = answers.q1 === "faulty";
+      const isRecent = answers.q2 === "lt_7" || answers.q2 === "7_30";
+      const wantsRefund = answers.q5 === "refund";
+      const notContacted = answers.q4 === "not_contacted";
+
+      if (isFaulty && isRecent && wantsRefund && notContacted) {
+        rec.push("You may be able to ask for a refund.");
+        rec.push("First, contact the business.");
+        rec.push("Prepare proof of purchase and photos.");
+        rec.push("Use our claim template.");
+      } else {
+        if (answers.q1 === "faulty") rec.push("You may have rights to a repair, replacement, or refund.");
+        if (answers.q1 === "not_delivered") rec.push("Ask the business for delivery proof or a full refund.");
+        if (answers.q1 === "different") rec.push("Request a remedy because the item was not as described.");
+        if (answers.q1 === "changed_mind") rec.push("A refund may depend on the store's return policy.");
+
+        if (answers.q2 === "gt_30") rec.push("Because more time has passed, gather strong supporting evidence.");
+        if (answers.q4 === "not_contacted") rec.push("First, contact the business directly and clearly explain the issue.");
+        if (answers.q4 === "refused" || answers.q4 === "no_reply") rec.push("Escalate your complaint using a formal written claim.");
+
+        if (answers.q5 === "refund") rec.push("State clearly that your preferred outcome is a refund.");
+        if (answers.q5 === "repair") rec.push("Ask for a repair with a clear expected timeframe.");
+        if (answers.q5 === "replacement") rec.push("Request a replacement item of equivalent value.");
+        if (answers.q5 === "not_sure") rec.push("We can help you choose the best remedy based on your documents.");
+
+        rec.push("Keep screenshots, receipts, order details, and message history.");
+        rec.push("Use our claim template if the business does not resolve the issue.");
+      }
+    } else {
+      rec.push("We could not find complete answers.");
+      rec.push("Please complete all 5 questions so we can provide accurate next steps.");
+    }
+
+    const summaryPairs = [
+      ["Problem type", labels.q1[answers.q1]],
+      ["When problem happened", labels.q2[answers.q2]],
+      ["Purchase channel", labels.q3[answers.q3]],
+      ["Contacted business", labels.q4[answers.q4]],
+      ["Preferred outcome", labels.q5[answers.q5]]
+    ];
+
+    summaryPairs.forEach(([k, v]) => {
+      summary.push(`${k}: ${v || "Not answered"}`);
+    });
+
+    document.getElementById("recommendations").innerHTML = rec.map(i => `<li>${i}</li>`).join("");
+    document.getElementById("answer-summary").innerHTML = summary.map(i => `<li>${i}</li>`).join("");
+  </script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+

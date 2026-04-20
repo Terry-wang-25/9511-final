@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Ruler — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <div class="overlay-backdrop">
+    <div class="overlay-panel" style="max-width:760px; width:min(94vw,760px);">
+      <div class="overlay-header">
+        <h2>Reading Ruler</h2>
+        <button type="button" id="ruler-close-btn" class="overlay-close" aria-label="Close">×</button>
+      </div>
+      <div class="overlay-body">
+        <p style="color:var(--color-text-secondary); margin-bottom:1.25rem;">Reading ruler shows a highlight bar that follows your cursor, helping you focus on the current line. This feature is especially useful for users with reading or visual difficulties.</p>
+        <p style="color:var(--color-text-secondary); margin-top:-0.5rem; margin-bottom:1.25rem;">Instructions: while browsing, right-click your mouse or press <strong>Esc</strong> to quickly exit the reading ruler.</p>
+
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" id="ruler-enabled" checked>
+            <label for="ruler-enabled" style="font-weight:600;">Enable reading ruler</label>
+          </div>
+          <p style="font-size:0.9rem; color:var(--color-text-muted); margin-top:0.45rem;">When enabled, moving your mouse over content shows a follow highlight bar.</p>
+        </div>
+
+        <div class="form-group" style="margin-top:1.25rem;">
+          <label for="ruler-color">Ruler color</label>
+          <div style="display:flex; gap:0.65rem; margin-top:0.5rem; flex-wrap:wrap;">
+            <label title="Yellow" style="cursor:pointer;"><input type="radio" name="ruler-color" value="#fef08a" checked> Y</label>
+            <label title="Green" style="cursor:pointer;"><input type="radio" name="ruler-color" value="#bbf7d0"> G</label>
+            <label title="Maroon tint" style="cursor:pointer;"><input type="radio" name="ruler-color" value="#f5d0d8"> M</label>
+            <label title="Red" style="cursor:pointer;"><input type="radio" name="ruler-color" value="#fecaca"> R</label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:1.25rem;">
+          <label for="ruler-height">Ruler height</label>
+          <select id="ruler-height" class="form-control" style="max-width:200px;">
+            <option value="narrow">Narrow (1 line)</option>
+            <option value="medium" selected>Medium (2 lines)</option>
+            <option value="wide">Wide (3 lines)</option>
+          </select>
+        </div>
+
+        <div style="background:var(--color-bg-light); padding:1rem; border-radius:var(--radius-sm); margin-top:1.5rem; position:relative;">
+          <p style="margin-bottom:0.5rem;"><strong>Preview:</strong></p>
+          <p style="margin-bottom:0.25rem;">This is sample text to show how reading ruler works.</p>
+          <p style="margin-bottom:0.25rem; background:rgba(254,240,138,0.5); padding:0.1rem 0;">When reading ruler is enabled, the line near your cursor will be highlighted.</p>
+          <p style="margin-bottom:0;">This helps you focus and read content line by line.</p>
+        </div>
+      </div>
+      <div class="overlay-footer">
+        <a href="Overlay - Screen Reader.html" class="btn btn-outline btn-sm">Back to accessibility menu</a>
+        <button type="button" id="ruler-cancel-btn" class="btn btn-outline btn-sm">Cancel</button>
+        <button type="button" id="ruler-apply-btn" class="btn btn-primary btn-sm">Apply</button>
+      </div>
+    </div>
+  </div>
+
+<script src="site-preferences.js"></script>
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const fallback = "主页面.html";
+    const returnPage = params.get("return") || (document.referrer ? document.referrer.split("/").pop() : fallback) || fallback;
+    const storageKey = "consumerRightsPrefs";
+
+    let prefs = {
+      readingRulerEnabled: true,
+      readingRulerColor: "#fef08a",
+      readingRulerHeight: "medium"
+    };
+    try {
+      const raw = localStorage.getItem(storageKey);
+      if (raw) {
+        prefs = { ...prefs, ...JSON.parse(raw) };
+      }
+    } catch {
+      // no-op
+    }
+
+    const enabledInput = document.getElementById("ruler-enabled");
+    const heightInput = document.getElementById("ruler-height");
+    const colorInput = document.querySelector(`input[name="ruler-color"][value="${prefs.readingRulerColor}"]`) ||
+      document.querySelector('input[name="ruler-color"][value="#fef08a"]');
+    enabledInput.checked = !!prefs.readingRulerEnabled;
+    heightInput.value = ["narrow", "medium", "wide"].includes(prefs.readingRulerHeight) ? prefs.readingRulerHeight : "medium";
+    if (colorInput) colorInput.checked = true;
+
+    const close = () => {
+      window.location.href = returnPage;
+    };
+
+    document.getElementById("ruler-close-btn").addEventListener("click", close);
+    document.getElementById("ruler-cancel-btn").addEventListener("click", close);
+
+    document.getElementById("ruler-apply-btn").addEventListener("click", function () {
+      const selectedColor = document.querySelector('input[name="ruler-color"]:checked');
+      const target = new URL(returnPage, window.location.href);
+      target.searchParams.set("ruler", enabledInput.checked ? "on" : "off");
+      target.searchParams.set("rulerColor", selectedColor ? selectedColor.value : "#fef08a");
+      target.searchParams.set("rulerHeight", heightInput.value || "medium");
+      window.location.href = `${target.pathname.split("/").pop()}?${target.searchParams.toString()}`;
+    });
+  })();
+</script>
+</body>
+</html>
+
+
+
+

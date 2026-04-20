@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your information — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+  
+
+  
+
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <div class="container">
+      <a href="主页面.html">Home</a><span>/</span><a href="任务 2 的主页面.html">How to Make a Claim</a><span>/</span><a href="任务 1 的第二个页面.html">Claim details</a><span>/</span><span>Your details</span>
+    </div>
+  </nav>
+
+  <main class="page-content claim-details-page">
+    <div class="container claim-details-wrap your-info-wrap">
+      <h1>Your details</h1>
+
+      <div class="step-indicator" aria-label="Claim progress">
+        <div class="step completed">
+          <span class="step-num">✓</span>
+          <span>Claim details</span>
+        </div>
+        <div class="step-connector completed"></div>
+        <div class="step active">
+          <span class="step-num">2</span>
+          <span>Your information</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <span>Confirm submission</span>
+        </div>
+      </div>
+
+      <form class="your-info-form" action="#" method="post" onsubmit="return false;">
+        <div class="your-info-row your-info-two-col">
+          <div>
+            <label for="given-name" class="claim-details-label">Given name</label>
+            <input id="given-name" class="form-control" type="text">
+            <p id="error-given-name" class="claim-field-error" aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="family-name" class="claim-details-label">Family name</label>
+            <input id="family-name" class="form-control" type="text">
+            <p id="error-family-name" class="claim-field-error" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="your-info-row">
+          <label for="address-line" class="claim-details-label">Address</label>
+          <div class="your-address-wrap">
+            <input id="address-line" class="form-control" type="text">
+            <button type="button" id="open-map-picker" class="your-address-icon-btn" aria-label="Open map picker">
+              <span class="your-address-icon" aria-hidden="true">⌕</span>
+            </button>
+          </div>
+          <p id="error-address" class="claim-field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="your-info-row your-info-two-col">
+          <div>
+            <label for="phone-number" class="claim-details-label">Phone number</label>
+            <input id="phone-number" class="form-control" type="tel">
+            <p id="error-phone" class="claim-field-error" aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="email-address" class="claim-details-label">Email address</label>
+            <input id="email-address" class="form-control" type="email">
+            <p id="error-email" class="claim-field-error" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="your-info-row your-info-two-col">
+          <div>
+            <label for="interpreter-language" class="claim-details-label">Interpreter <span class="claim-details-optional">optional</span></label>
+          </div>
+          <div>
+            <input id="interpreter-language" class="form-control" type="text" placeholder="Language">
+          </div>
+        </div>
+
+        <div class="claim-details-actions your-info-actions">
+          <a href="任务 1 的第二个页面.html" class="btn btn-outline">Previous</a>
+          <button type="button" id="your-info-continue-btn" class="btn claim-continue-btn">Continue</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="map-picker-modal" class="overlay-backdrop" style="display:none;">
+    <div class="overlay-panel map-picker-panel" role="dialog" aria-modal="true" aria-label="Select address from map">
+      <div class="overlay-header">
+        <h2>Select address on map</h2>
+        <button type="button" id="map-picker-close" class="overlay-close" aria-label="Close map picker">×</button>
+      </div>
+      <div class="overlay-body">
+        <div class="map-picker-search">
+          <input id="map-picker-query" type="text" class="form-control" placeholder="Search address, suburb, or postcode">
+          <button type="button" id="map-picker-search-btn" class="btn btn-primary btn-sm">Search</button>
+        </div>
+        <p id="map-picker-hint" style="margin:0.5rem 0 0.75rem; color:var(--color-text-secondary); font-size:0.9rem;">Tip: Search and click one result to select address.</p>
+        <div id="map-picker-results" class="map-picker-results"></div>
+        <div id="map-picker-canvas" class="map-picker-frame" aria-label="Interactive map"></div>
+      </div>
+      <div class="overlay-footer">
+        <button type="button" id="map-picker-cancel" class="btn btn-outline btn-sm">Cancel</button>
+        <button type="button" id="map-picker-confirm" class="btn btn-primary btn-sm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. 保留所有权利。</span>
+        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  (function () {
+    const STORAGE_KEY = "consumerRightsClaimDraft";
+    const continueBtn = document.getElementById("your-info-continue-btn");
+    const addressInput = document.getElementById("address-line");
+    const mapOpenBtn = document.getElementById("open-map-picker");
+    const mapModal = document.getElementById("map-picker-modal");
+    const mapCloseBtn = document.getElementById("map-picker-close");
+    const mapCancelBtn = document.getElementById("map-picker-cancel");
+    const mapConfirmBtn = document.getElementById("map-picker-confirm");
+    const mapQueryInput = document.getElementById("map-picker-query");
+    const mapSearchBtn = document.getElementById("map-picker-search-btn");
+    const mapResults = document.getElementById("map-picker-results");
+    const mapCanvas = document.getElementById("map-picker-canvas");
+    const mapHint = document.getElementById("map-picker-hint");
+    const nextPage = "任务 1 的第三个页面.html";
+    if (!continueBtn || !addressInput) return;
+
+    const fields = [
+      { id: "given-name", errorId: "error-given-name", message: "Please enter your given name." },
+      { id: "family-name", errorId: "error-family-name", message: "Please enter your family name." },
+      { id: "address-line", errorId: "error-address", message: "Please enter your address." },
+      { id: "phone-number", errorId: "error-phone", message: "Please enter a valid phone number." },
+      { id: "email-address", errorId: "error-email", message: "Please enter a valid email address." }
+    ];
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9+\-()\s]{6,}$/;
+    let selectedAddress = "";
+    let selectedLat = -33.87;
+    let selectedLon = 151.21;
+    let mapInstance = null;
+    let mapMarker = null;
+
+    const placeMarker = (lat, lon) => {
+      selectedLat = Number(lat);
+      selectedLon = Number(lon);
+      if (!mapInstance) return;
+      if (mapMarker) {
+        mapMarker.setLatLng([selectedLat, selectedLon]);
+      } else {
+        mapMarker = L.marker([selectedLat, selectedLon]).addTo(mapInstance);
+      }
+      mapInstance.setView([selectedLat, selectedLon], 15);
+    };
+
+    const reverseGeocode = async (lat, lon) => {
+      try {
+        const res = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(lat)}&lon=${encodeURIComponent(lon)}`
+        );
+        const data = await res.json();
+        return (data && data.display_name) || "";
+      } catch {
+        return "";
+      }
+    };
+
+    const ensureMap = () => {
+      if (!mapCanvas || typeof L === "undefined") return;
+      if (mapInstance) return;
+      mapInstance = L.map(mapCanvas).setView([selectedLat, selectedLon], 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors"
+      }).addTo(mapInstance);
+
+      mapInstance.on("click", async (event) => {
+        const { lat, lng } = event.latlng;
+        placeMarker(lat, lng);
+        const resolved = await reverseGeocode(lat, lng);
+        if (resolved) {
+          selectedAddress = resolved;
+          mapQueryInput.value = resolved;
+          mapHint.textContent = "Location selected from map. Click Confirm to use this address.";
+        } else {
+          selectedAddress = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+          mapQueryInput.value = selectedAddress;
+          mapHint.textContent = "Coordinates selected. Click Confirm to use this location.";
+        }
+      });
+    };
+
+    const openMapModal = () => {
+      if (!mapModal) return;
+      selectedAddress = addressInput.value.trim();
+      mapModal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+      ensureMap();
+      setTimeout(() => {
+        if (mapInstance) mapInstance.invalidateSize();
+      }, 60);
+      if (mapQueryInput) mapQueryInput.focus();
+    };
+
+    const closeMapModal = () => {
+      if (!mapModal) return;
+      mapModal.style.display = "none";
+      document.body.style.overflow = "";
+    };
+
+    const renderResults = (items) => {
+      if (!mapResults) return;
+      mapResults.innerHTML = "";
+      if (!items.length) {
+        mapResults.innerHTML = '<p class="map-picker-empty">No addresses found. Please try another keyword.</p>';
+        return;
+      }
+      const list = document.createElement("div");
+      list.className = "map-picker-list";
+      items.forEach((item) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "map-picker-result";
+        btn.textContent = item.display_name;
+        btn.addEventListener("click", () => {
+          selectedAddress = item.display_name;
+          mapQueryInput.value = item.display_name;
+          placeMarker(item.lat, item.lon);
+          list.querySelectorAll(".map-picker-result").forEach((n) => n.classList.remove("active"));
+          btn.classList.add("active");
+        });
+        list.appendChild(btn);
+      });
+      mapResults.appendChild(list);
+    };
+
+    const searchAddress = async () => {
+      if (!mapQueryInput || !mapHint) return;
+      const q = mapQueryInput.value.trim();
+      if (!q) {
+        mapHint.textContent = "Please enter an address keyword first.";
+        return;
+      }
+      mapHint.textContent = "Searching addresses...";
+      try {
+        const res = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(q)}&limit=6&addressdetails=1`);
+        const data = await res.json();
+        renderResults(Array.isArray(data) ? data : []);
+        if (Array.isArray(data) && data[0]) {
+          placeMarker(data[0].lat, data[0].lon);
+        }
+        mapHint.textContent = "Select one result and click Confirm.";
+      } catch {
+        mapHint.textContent = "Unable to search right now. Please try again later.";
+      }
+    };
+
+    const setError = (id, message) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.textContent = message || "";
+      el.classList.toggle("visible", Boolean(message));
+    };
+
+    const validateField = (field) => {
+      const input = document.getElementById(field.id);
+      if (!input) return false;
+      const value = input.value.trim();
+      if (!value) return false;
+      if (field.id === "email-address") return emailRegex.test(value);
+      if (field.id === "phone-number") return phoneRegex.test(value);
+      return true;
+    };
+
+    const validate = (showErrors) => {
+      let valid = true;
+      fields.forEach((field) => {
+        const ok = validateField(field);
+        if (!ok) valid = false;
+        const input = document.getElementById(field.id);
+        if (input) input.classList.toggle("error", showErrors && !ok);
+        setError(field.errorId, showErrors && !ok ? field.message : "");
+      });
+      continueBtn.classList.toggle("is-ready", valid);
+      return valid;
+    };
+
+    const saveDraft = () => {
+      let current = {};
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        current = raw ? JSON.parse(raw) : {};
+      } catch {
+        current = {};
+      }
+      const next = {
+        ...current,
+        yourDetails: {
+          givenName: (document.getElementById("given-name")?.value || "").trim(),
+          familyName: (document.getElementById("family-name")?.value || "").trim(),
+          address: (document.getElementById("address-line")?.value || "").trim(),
+          phone: (document.getElementById("phone-number")?.value || "").trim(),
+          email: (document.getElementById("email-address")?.value || "").trim(),
+          interpreterLanguage: (document.getElementById("interpreter-language")?.value || "").trim()
+        }
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    };
+
+    fields.forEach((field) => {
+      const input = document.getElementById(field.id);
+      if (!input) return;
+      input.addEventListener("input", () => validate(false));
+      input.addEventListener("blur", () => validate(false));
+    });
+
+    if (mapOpenBtn) mapOpenBtn.addEventListener("click", openMapModal);
+    if (mapCloseBtn) mapCloseBtn.addEventListener("click", closeMapModal);
+    if (mapCancelBtn) mapCancelBtn.addEventListener("click", closeMapModal);
+    if (mapSearchBtn) mapSearchBtn.addEventListener("click", searchAddress);
+    if (mapQueryInput) {
+      mapQueryInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          searchAddress();
+        }
+      });
+    }
+    if (mapConfirmBtn) {
+      mapConfirmBtn.addEventListener("click", () => {
+        if (selectedAddress) {
+          addressInput.value = selectedAddress;
+          addressInput.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+        closeMapModal();
+      });
+    }
+    if (mapModal) {
+      mapModal.addEventListener("click", (e) => {
+        if (e.target === mapModal) closeMapModal();
+      });
+    }
+
+    continueBtn.addEventListener("click", () => {
+      if (validate(true)) {
+        saveDraft();
+        window.location.href = nextPage;
+      }
+    });
+
+    validate(false);
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Support — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la chatbot-page">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <a href="主页面.html">Home</a><span>/</span><a href="Contact.html">User support</a><span>/</span>Online support
+    </div>
+  </nav>
+
+  <main class="page-content chatbot-page-main">
+    <div class="container">
+      <div class="page-header" style="background:none; padding:2rem 0; border:none;">
+        <h1>Online support</h1>
+        <p>You are now chatting with the Consumer Rights virtual assistant. If you need a human agent, type "human support".</p>
+      </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container chatbot-page-center">
+      <div class="chatbot-header">
+        <div>
+          <strong>Consumer Rights Assistant</strong>
+          <div style="font-size:0.75rem; opacity:0.8;">Online</div>
+        </div>
+        <a href="主页面.html" class="chatbot-close-btn" aria-label="Close chat">
+          <span aria-hidden="true">×</span>
+          <span>Close</span>
+        </a>
+      </div>
+
+      <div class="chatbot-messages">
+        <div class="chat-msg bot">
+          <p style="margin:0;">Hi! I am the Consumer Rights virtual assistant. I can help you:</p>
+          <ul style="margin:0.5rem 0 0 1rem; font-size:0.9rem;">
+            <li>Understand your consumer rights</li>
+            <li>Find support guides</li>
+            <li>Start the claim process</li>
+            <li>Track case status</li>
+          </ul>
+          <p style="margin:0.5rem 0 0;">Tell me what you need help with.</p>
+        </div>
+
+        <div class="chat-msg user">
+          <p style="margin:0;">I want to understand the deposit refund process.</p>
+        </div>
+
+        <div class="chat-msg bot">
+          <p style="margin:0;">For deposit refunds, the basic process is:</p>
+          <ol style="margin:0.5rem 0 0 1rem; font-size:0.9rem; line-height:1.8;">
+            <li>Complete the move-out property inspection</li>
+            <li>Clean the property and return keys</li>
+            <li>Landlord refunds within 14 business days</li>
+          </ol>
+          <p style="margin:0.5rem 0 0;">You can check the <a href="任务 2 的主页面.html">full deposit refund guide</a> for more details.</p>
+          <p style="margin:0.5rem 0 0;">What specific problem are you facing right now?</p>
+        </div>
+
+        <div class="chat-msg user">
+          <p style="margin:0;">What if the landlord refuses to return my deposit?</p>
+        </div>
+
+        <div class="chat-msg bot">
+          <p style="margin:0;">If your landlord refuses to return your deposit, follow these steps:</p>
+          <p style="margin:0.5rem 0 0;">1. Send a written notice first<br>2. Collect evidence<br>3. Apply for mediation through this platform<br>4. Submit a formal claim if needed</p>
+          <p style="margin:0.5rem 0 0;">Do you want me to help you <a href="任务 1 主页面.html">start a claim</a>? Or would you like to read more <a href="任务 2 的页面分支 1.html">about landlord deposit-refusal rights</a>?</p>
+        </div>
+      </div>
+
+      <div class="chatbot-input">
+        <label for="chat-input" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Input message</label>
+        <input type="text" id="chat-input" placeholder="Input your question...">
+        <button type="button" id="chat-send-btn">Send</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. All rights reserved.</span>
+        <div><a href="#">Privacy policy</a><a href="#">Terms of use</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    const input = document.getElementById("chat-input");
+    const sendBtn = document.getElementById("chat-send-btn");
+    const messages = document.querySelector(".chatbot-messages");
+    if (!input || !sendBtn || !messages) return;
+
+    const botReply = (text) => {
+      const msg = text.toLowerCase();
+      if (msg.includes("deposit")) {
+        return 'You can start with <a href="任务 2 的主页面.html">How to Make a Claim</a> and prepare receipts, chat records, and photo evidence.';
+      }
+      if (msg.includes("claim")) {
+        return 'You can click <a href="任务 1 主页面.html">Start a claim</a> to begin the claim process.';
+      }
+      if (msg.includes("status") || msg.includes("track") || msg.includes("case")) {
+        return 'You can go to <a href="Case Tracker.html">Case Tracker</a> to check your case progress.';
+      }
+      return "I received your question. Please share when it happened, how the other party responded, and what outcome you want, and I can guide your next steps.";
+    };
+
+    const appendMessage = (role, html) => {
+      const wrapper = document.createElement("div");
+      wrapper.className = `chat-msg ${role}`;
+      const p = document.createElement("p");
+      p.style.margin = "0";
+      p.innerHTML = html;
+      wrapper.appendChild(p);
+      messages.appendChild(wrapper);
+      messages.scrollTop = messages.scrollHeight;
+    };
+
+    const send = () => {
+      const value = input.value.trim();
+      if (!value) return;
+      appendMessage("user", value.replace(/[<>&]/g, (ch) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[ch])));
+      input.value = "";
+      appendMessage("bot", botReply(value));
+    };
+
+    sendBtn.addEventListener("click", send);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        send();
+      }
+    });
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提交投诉 — 确认提交 — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+
+
+  
+
+  
+
+  <nav class="breadcrumbs" aria-label="面包屑导航">
+    <div class="container">
+      <a href="主页面.html">Home</a><span>/</span><a href="任务 2 的主页面.html">How to Make a Claim</a><span>/</span><a href="任务 1 的第二个页面.html">Claim details</a><span>/</span><a href="任务 1 的你的信息页面.html">Your details</a><span>/</span><span>Confirm submission</span>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Confirm submission</h1>
+      <p>Review your answers from Claim details and Your details before final submission.</p>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <div class="container">
+
+      <div class="step-indicator">
+        <div class="step completed">
+          <span class="step-num">✓</span>
+          <span>Claim details</span>
+        </div>
+        <div class="step-connector completed"></div>
+        <div class="step completed">
+          <span class="step-num">✓</span>
+          <span>Your information</span>
+        </div>
+        <div class="step-connector completed"></div>
+        <div class="step active">
+          <span class="step-num">3</span>
+          <span>Confirm submission</span>
+        </div>
+      </div>
+
+      <div style="max-width:760px;">
+        <h2>Submitted details summary</h2>
+        <p style="color:var(--color-text-secondary); margin-bottom:1.5rem;">Please check the information below. If everything is correct, click <strong>Confirm submission</strong>.</p>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+          <h3>Claim details</h3>
+          <table style="width:100%; font-size:0.95rem;">
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted); width:200px;">Case type</td><td id="sum-case-type">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Estimated impact</td><td id="sum-impact">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Written agreement</td><td id="sum-contract">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Description</td><td id="sum-description">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Uploaded files</td><td id="sum-files">-</td></tr>
+          </table>
+
+          <h3 style="margin-top:1.25rem;">Your details</h3>
+          <table style="width:100%; font-size:0.95rem;">
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted); width:200px;">Given name</td><td id="sum-given">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Family name</td><td id="sum-family">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Address</td><td id="sum-address">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Phone number</td><td id="sum-phone">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Email address</td><td id="sum-email">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Interpreter language</td><td id="sum-interpreter">-</td></tr>
+          </table>
+        </div>
+
+        <div class="alert alert-warning">
+          <strong>Before submission:</strong> After you submit, you will receive a confirmation email and claim number. Our team will review the claim within 5 business days.
+        </div>
+
+        <div class="form-check" style="margin:1.5rem 0;">
+          <input type="checkbox" id="confirm-accurate">
+          <label for="confirm-accurate">I confirm that all information above is accurate.</label>
+          <p id="confirm-accurate-error" class="claim-field-error" aria-live="polite"></p>
+        </div>
+
+        <div class="confirm-submit-actions" style="display:flex; justify-content:space-between; align-items:center;">
+          <a href="任务 1 的你的信息页面.html" class="btn btn-outline">← Edit information</a>
+          <button type="button" id="final-confirm-btn" class="btn btn-primary btn-lg">Confirm submission</button>
+        </div>
+      </div>
+
+      <!-- Success Modal -->
+      <div id="success-modal" class="overlay-backdrop" style="display:none;">
+        <div class="overlay-panel" style="max-width:480px; text-align:center; padding:2.5rem;">
+          <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+          <h2 style="margin-bottom:0.75rem;">Submission successful!</h2>
+          <p style="color:var(--color-text-secondary);">Your claim number is</p>
+          <p style="font-size:1.5rem; font-weight:700; color:var(--color-primary); margin-bottom:1rem;">#CR-2026-0042</p>
+          <p style="color:var(--color-text-secondary); font-size:0.95rem; margin-bottom:1.5rem;">
+            A confirmation email has been sent to your registered email.<br>
+            We will review your claim within 5 business days.
+          </p>
+          <div style="display:flex; gap:0.75rem; justify-content:center;">
+            <a href="Case Tracker.html" class="btn btn-primary">Track claim</a>
+            <a href="Dashboard.html" class="btn btn-outline">Back to dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. 保留所有权利。</span>
+        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    const STORAGE_KEY = "consumerRightsClaimDraft";
+    const fallback = "-";
+    let draft = {};
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      draft = raw ? JSON.parse(raw) : {};
+    } catch {
+      draft = {};
+    }
+
+    const claim = draft.claimDetails || {};
+    const info = draft.yourDetails || {};
+    const setText = (id, value) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const text = typeof value === "string" ? value.trim() : value;
+      el.textContent = text ? text : fallback;
+    };
+
+    setText("sum-case-type", claim.caseType);
+    setText("sum-impact", claim.impact);
+    setText("sum-contract", claim.hasContract);
+    setText("sum-description", claim.description);
+    setText("sum-files", Array.isArray(claim.uploadedFiles) && claim.uploadedFiles.length ? claim.uploadedFiles.join(", ") : fallback);
+
+    setText("sum-given", info.givenName);
+    setText("sum-family", info.familyName);
+    setText("sum-address", info.address);
+    setText("sum-phone", info.phone);
+    setText("sum-email", info.email);
+    setText("sum-interpreter", info.interpreterLanguage || "Not requested");
+
+    const confirmBtn = document.getElementById("final-confirm-btn");
+    const confirmCheck = document.getElementById("confirm-accurate");
+    const confirmError = document.getElementById("confirm-accurate-error");
+    const modal = document.getElementById("success-modal");
+    if (!confirmBtn || !confirmCheck || !modal || !confirmError) return;
+
+    confirmBtn.addEventListener("click", () => {
+      if (!confirmCheck.checked) {
+        confirmError.textContent = "Please tick the agreement box before confirming submission.";
+        confirmError.classList.add("visible");
+        return;
+      }
+      confirmError.textContent = "";
+      confirmError.classList.remove("visible");
+      modal.style.display = "flex";
+      localStorage.removeItem(STORAGE_KEY);
+    });
+
+    confirmCheck.addEventListener("change", () => {
+      if (confirmCheck.checked) {
+        confirmError.textContent = "";
+        confirmError.classList.remove("visible");
+      }
+    });
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+

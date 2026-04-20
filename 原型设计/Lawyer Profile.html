@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lawyer profile — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+
+
+  <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
+    <div class="container">
+      <a href="主页面.html">Home</a><span>/</span><span>Legal team</span><span>/</span><span id="crumb-lawyer-name">Lawyer profile</span>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1 id="lawyer-name">Lawyer profile</h1>
+      <p id="lawyer-role">Consumer rights specialist</p>
+    </div>
+  </section>
+
+  <main class="page-content">
+    <div class="container">
+      <section class="lawyer-profile-hero">
+        <img id="lawyer-photo" class="lawyer-profile-photo" src="" alt="Lawyer photo">
+        <div>
+          <h2 id="lawyer-focus">Practice focus</h2>
+          <p id="lawyer-bio" class="lawyer-profile-subtitle"></p>
+          <div class="lawyer-profile-contact">
+            <div><strong>Email:</strong> <a id="lawyer-email" href="#"></a></div>
+            <div><strong>Phone:</strong> <span id="lawyer-phone"></span></div>
+            <div><strong>Office:</strong> Sydney Consumer Rights Legal Team</div>
+            <div><strong>Languages:</strong> <span id="lawyer-languages"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Handled cases</h2>
+        <ul id="lawyer-cases" class="lawyer-cases-list"></ul>
+      </section>
+
+      <section class="appointment-form-wrap card">
+        <h2>Book an appointment</h2>
+        <p style="color:var(--color-text-secondary); margin-bottom:1rem;">Submit your details and we will contact you to confirm a legal consultation time.</p>
+        <form id="appointment-form">
+          <div class="form-group">
+            <label for="appt-name">Your name</label>
+            <input id="appt-name" class="form-control" type="text" required>
+          </div>
+          <div class="form-group">
+            <label for="appt-email">Email</label>
+            <input id="appt-email" class="form-control" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="appt-phone">Phone</label>
+            <input id="appt-phone" class="form-control" type="tel" required>
+          </div>
+          <div class="form-group">
+            <label for="appt-date">Preferred date</label>
+            <input id="appt-date" class="form-control" type="date" required>
+          </div>
+          <div class="form-group">
+            <label for="appt-issue">Issue summary</label>
+            <textarea id="appt-issue" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit booking request</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <div id="appointment-modal" class="overlay-backdrop" style="display:none;">
+    <div class="overlay-panel" style="max-width:430px;">
+      <div class="overlay-header">
+        <h2>Booking submitted</h2>
+      </div>
+      <div class="overlay-body">
+        <p style="color:var(--color-text-secondary); margin-bottom:0;">Your appointment request has been sent successfully. Our team will contact you shortly.</p>
+      </div>
+      <div class="overlay-footer">
+        <button type="button" id="appointment-confirm" class="btn btn-primary btn-sm">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2026 Consumer Rights. 保留所有权利。</span>
+        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    const profiles = {
+      sarah: {
+        name: "Sarah Mitchell",
+        role: "Product Safety & Refund Lawyer",
+        focus: "Consumer product disputes",
+        bio: "Sarah supports consumers with faulty product claims, warranty refusals, and retailer refund disputes.",
+        email: "sarah.mitchell@consumerrights.org.au",
+        phone: "1800 100 201",
+        languages: "English",
+        photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Recovered $8,400 for a family after repeated appliance failures.",
+          "Resolved a major electronics refund dispute in 12 days.",
+          "Represented 16 consumers in one false warranty practice complaint."
+        ]
+      },
+      james: {
+        name: "James Chen",
+        role: "Service Contract Lawyer",
+        focus: "Contract terms and cancellation rights",
+        bio: "James handles hidden fee cases, unfair subscription terms, and cancelled service agreement disputes.",
+        email: "james.chen@consumerrights.org.au",
+        phone: "1800 100 245",
+        languages: "English, Mandarin",
+        photo: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Cancelled a $12,000 unfair service contract without penalty.",
+          "Helped 24 consumers receive subscription fee refunds.",
+          "Filed tribunal claims for unclear termination clauses."
+        ]
+      },
+      amira: {
+        name: "Amira Hassan",
+        role: "Dispute Resolution Specialist",
+        focus: "Mediation and tribunal complaint matters",
+        bio: "Amira helps consumers escalate unresolved complaints through mediation and tribunal pathways.",
+        email: "amira.hassan@consumerrights.org.au",
+        phone: "1800 100 277",
+        languages: "English, Arabic",
+        photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Mediated 30+ business-consumer disputes in 2025.",
+          "Reached settlement in a delayed delivery class complaint.",
+          "Prepared tribunal evidence for high-value repair disputes."
+        ]
+      },
+      david: {
+        name: "David Park",
+        role: "Financial Services Lawyer",
+        focus: "Banking and insurance claims",
+        bio: "David focuses on bank charge disputes, denied insurance payouts, and scam-linked transaction recovery.",
+        email: "david.park@consumerrights.org.au",
+        phone: "1800 100 289",
+        languages: "English, Korean",
+        photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Recovered $15,000 after an unauthorized transfer dispute.",
+          "Won internal review for an initially rejected insurance claim.",
+          "Supported scam victims in chargeback and complaint process."
+        ]
+      },
+      emma: {
+        name: "Emma Williams",
+        role: "Consumer Protection Advocate",
+        focus: "Misleading advertising and online scam complaints",
+        bio: "Emma helps consumers challenge deceptive advertising, fake discounts, and scam subscription schemes.",
+        email: "emma.williams@consumerrights.org.au",
+        phone: "1800 100 301",
+        languages: "English",
+        photo: "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Led complaint strategy for misleading online marketing case.",
+          "Recovered recurring payments from unauthorized subscriptions.",
+          "Prepared evidence package for regulator investigation."
+        ]
+      },
+      raj: {
+        name: "Raj Patel",
+        role: "Multilingual Legal Advisor",
+        focus: "Cross-language consumer support",
+        bio: "Raj provides multilingual advice for consumers needing legal help across language barriers.",
+        email: "raj.patel@consumerrights.org.au",
+        phone: "1800 100 318",
+        languages: "English, Hindi, Mandarin",
+        photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+        cases: [
+          "Guided multilingual households through formal claim process.",
+          "Resolved communication-related contract misunderstandings.",
+          "Supported community legal education on consumer rights."
+        ]
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = (params.get("id") || "sarah").toLowerCase();
+    const profile = profiles[id] || profiles.sarah;
+
+    const setText = (idValue, text) => {
+      const el = document.getElementById(idValue);
+      if (el) el.textContent = text;
+    };
+    setText("crumb-lawyer-name", profile.name);
+    setText("lawyer-name", profile.name);
+    setText("lawyer-role", profile.role);
+    setText("lawyer-focus", profile.focus);
+    setText("lawyer-bio", profile.bio);
+    setText("lawyer-phone", profile.phone);
+    setText("lawyer-languages", profile.languages);
+    const photoEl = document.getElementById("lawyer-photo");
+    if (photoEl) {
+      photoEl.src = profile.photo;
+      photoEl.alt = profile.name;
+    }
+    const emailEl = document.getElementById("lawyer-email");
+    if (emailEl) {
+      emailEl.textContent = profile.email;
+      emailEl.href = `mailto:${profile.email}`;
+    }
+
+    const casesEl = document.getElementById("lawyer-cases");
+    if (casesEl) {
+      casesEl.innerHTML = "";
+      profile.cases.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        casesEl.appendChild(li);
+      });
+    }
+
+    const form = document.getElementById("appointment-form");
+    const modal = document.getElementById("appointment-modal");
+    const confirmBtn = document.getElementById("appointment-confirm");
+    if (form && modal && confirmBtn) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        modal.style.display = "flex";
+      });
+      const close = () => {
+        modal.style.display = "none";
+        form.reset();
+      };
+      confirmBtn.addEventListener("click", close);
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) close();
+      });
+    }
+  })();
+</script>
+<script src="site-preferences.js"></script>
+</body>
+</html>
+
+
+
+
