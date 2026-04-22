@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Access to information — Consumer Rights</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="subpage subpage-header-la la-info-page">
+
+    <div class="la-sticky-site-top">
+  <!-- Utility Bar (font + language controls — Legal Aid style) -->
+  <div class="utility-bar utility-bar--la">
+    <div class="container utility-bar-inner utility-bar-inner--la">
+      <div class="utility-la-cluster" aria-label="Text size and language">
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="1" aria-label="Increase font size">A+</button>
+        <button type="button" class="utility-la-circle utility-font-btn" data-font-step="-1" aria-label="Decrease font size">A−</button>
+        <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
+          <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
+        </button>
+        <div class="utility-la-lang-auth-row" role="group" aria-label="Language and account">
+        <div class="utility-la-lang-wrap">
+          <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
+            <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
+            <span>Language</span>
+          </button>
+          <ul class="utility-la-lang-menu" id="utility-lang-menu" role="listbox" aria-labelledby="utility-lang-toggle" hidden>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="en"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/au.png" width="20" height="15" alt="" decoding="async"></span><span>English</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="es"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/es.png" width="20" height="15" alt="" decoding="async"></span><span>Español</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ar"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/sa.png" width="20" height="15" alt="" decoding="async"></span><span>العربية</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="it"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/it.png" width="20" height="15" alt="" decoding="async"></span><span>Italiano</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="el"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/gr.png" width="20" height="15" alt="" decoding="async"></span><span>Ελληνικά</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ta"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>தமிழ்</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="vi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/vn.png" width="20" height="15" alt="" decoding="async"></span><span>Tiếng Việt</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hi"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/in.png" width="20" height="15" alt="" decoding="async"></span><span>हिन्दी</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ru"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/ru.png" width="20" height="15" alt="" decoding="async"></span><span>Русский</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hans"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/cn.png" width="20" height="15" alt="" decoding="async"></span><span>简体中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="zh-Hant"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/tw.png" width="20" height="15" alt="" decoding="async"></span><span>繁體中文</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="ko"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/kr.png" width="20" height="15" alt="" decoding="async"></span><span>한국어</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
+            <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
+          </ul>
+        </div>
+          <a href="登录页面.html" class="utility-la-auth-link">Log in</a>
+          <a href="注册页面.html" class="utility-la-auth-link">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header (Legal Aid–style dual brand + mega labels) -->
+  <header class="site-header site-header--la">
+    <div class="la-brand-bar">
+      <div class="la-brand-bar-inner">
+        <a href="主页面.html" class="la-brand-maroon la-brand-home" aria-label="Home — Consumer Rights, information and support">
+          <span class="la-brand-line1">Consumer Rights</span>
+          <span class="la-brand-line2">Information &amp; support</span>
+        </a>
+        <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
+          <a href="主页面.html">Home</a>
+          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  </div>
+  <div class="la-info-title-band">
+    <div class="container">
+      <h1>Access to information</h1>
+    </div>
+  </div>
+
+  <main class="la-info-main" id="main-content">
+    <div class="container la-info-container">
+      <div class="la-info-prose">
+
+      <p class="la-info-lead">Find out how you can request access to information held by Consumer Rights and the Professional Legal Team in connection with consumer education, complaints triage and referrals.</p>
+
+      <nav class="la-info-toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <ul>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#what-we-hold">What we may hold</a></li>
+          <li><a href="#how-to-request">How to make a request</a></li>
+          <li><a href="#downloads">Forms and guides</a></li>
+        </ul>
+      </nav>
+
+      <h2 class="la-info-h2" id="intro">Introduction</h2>
+      <p>We aim to be transparent about records that relate to consumer enquiries, workshops, publications and case-tracking workflows. Access may be provided informally (a quick copy of your own submission) or through a formal process where legislation or internal rules apply.</p>
+
+      <h2 class="la-info-h2" id="what-we-hold">What we may hold</h2>
+      <ul>
+        <li>contact forms and messages about goods, services, refunds or scams;</li>
+        <li>case tracker updates you or our staff add to a matter;</li>
+        <li>de-identified analytics about which consumer topics are most viewed;</li>
+        <li>training notes or quality checks that reference your enquiry <strong>only where necessary</strong> and subject to privacy safeguards.</li>
+      </ul>
+
+      <h2 class="la-info-h2" id="how-to-request">How to make a request</h2>
+      <details class="la-info-details">
+        <summary>Tips before you apply</summary>
+        <div class="la-info-details-body">
+          <p>Describe the information you want as clearly as you can (for example: “emails I sent via Contact us in March 2026”). Tell us if you need the response in another format. We may ask to verify your identity to protect your account and others’ privacy.</p>
+        </div>
+      </details>
+      <details class="la-info-details">
+        <summary>Informal request</summary>
+        <div class="la-info-details-body">
+          <p>For many consumer questions, start with <a href="Contact.html">Contact us</a>. We can often return a copy of your own form responses or confirm next steps without a formal application.</p>
+        </div>
+      </details>
+      <details class="la-info-details">
+        <summary>Formal access request</summary>
+        <div class="la-info-details-body">
+          <p>Use the formal application form below where you need a comprehensive response or where a statutory or agency-style timeline applies. We will acknowledge receipt and explain any fees, exemptions or redactions—for example, if a document contains another person’s personal information.</p>
+        </div>
+      </details>
+
+      <div class="la-info-callout">
+        <span class="la-info-callout-icon" aria-hidden="true">ℹ️</span>
+        <div>
+          <strong>More information</strong>
+          <p style="margin:0.35rem 0 0;">For product safety or national scams, you may also use <a href="https://www.accc.gov.au/" rel="noopener noreferrer">ACCC</a> resources. Links open in a new tab where marked.</p>
+        </div>
+      </div>
+
+      <h2 class="la-info-h2" id="downloads">Forms and guides</h2>
+      <div class="la-info-downloads">
+        <div class="la-info-resource">
+          <span class="la-info-resource-icon" aria-hidden="true">📄</span>
+          <h3>Information access application</h3>
+          <p class="la-info-resource-meta">PDF · 6 pages · March 2026 · 96 KB <em>(example)</em></p>
+          <p><a href="#">Download</a> <span aria-hidden="true">↧</span></p>
+        </div>
+        <div class="la-info-resource">
+          <span class="la-info-resource-icon" aria-hidden="true">📄</span>
+          <h3>Consumer records — fact sheet</h3>
+          <p class="la-info-resource-meta">PDF · 4 pages · March 2026 · 72 KB <em>(example)</em></p>
+          <p><a href="#">Download</a> <span aria-hidden="true">↧</span></p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--la">
+    <div class="container la-footer-grid">
+      <div class="la-footer-col">
+        <h2 class="la-footer-heading">Acknowledgement of Country</h2>
+        <p class="la-footer-text">We acknowledge the traditional custodians of the lands on which we live and work, and pay respect to Elders past and present. Consumer Rights is committed to clear information for older adults and all communities.</p>
+      </div>
+      <div class="la-footer-col">
+        <h2 class="la-footer-heading">Explore</h2>
+        <ul class="la-footer-links">
+          <li><a href="Check My Rights - Page 1.html">My consumer issue is about…</a></li>
+          <li><a href="任务 2 的主页面.html">Ways to get help</a></li>
+          <li><a href="News.html">News</a></li>
+          <li><a href="Contact.html">Contact us</a></li>
+          <li><a href="Case Tracker.html">Case tracker</a></li>
+        </ul>
+      </div>
+      <div class="la-footer-col">
+        <h2 class="la-footer-heading">Follow us</h2>
+        <ul class="la-footer-social">
+          <li><a href="#" aria-label="Facebook">Facebook</a></li>
+          <li><a href="#" aria-label="Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="YouTube">YouTube</a></li>
+          <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="la-footer-utility">
+      <div class="container la-footer-utility-inner">
+        <a href="Privacy-on-this-site.html">Privacy on this site</a>
+        <a href="Accessibility-statement.html">Accessibility statement</a>
+        <a href="Copyright-and-disclaimer.html">Copyright and disclaimer</a>
+        <a href="Access-to-information.html">Access to information</a>
+        <a href="Site-map.html">Site map</a>
+      </div>
+    </div>
+    <div class="la-footer-publisher"><div class="container">This website is published by <strong>The Watermelon</strong> ©2026.</div></div>
+  </footer>
+
+<script src="site-preferences.js"></script>
+</body>
+</html>

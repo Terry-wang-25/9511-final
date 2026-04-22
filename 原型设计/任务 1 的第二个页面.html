@@ -18,6 +18,7 @@
         <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
           <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
         </button>
+        <div class="utility-la-lang-auth-row" role="group" aria-label="Language and account">
         <div class="utility-la-lang-wrap">
           <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
             <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
@@ -39,6 +40,9 @@
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
           </ul>
+        </div>
+          <a href="登录页面.html" class="utility-la-auth-link">Log in</a>
+          <a href="注册页面.html" class="utility-la-auth-link">Sign up</a>
         </div>
       </div>
     </div>
@@ -81,6 +85,7 @@
     <div class="container claim-details-wrap">
       <h1>Claim details</h1>
       <p class="claim-details-subtitle">All questions must be answered, unless marked "optional".</p>
+      <p id="claim-wizard-topic-line" class="claim-wizard-topic-line" hidden></p>
 
       <div class="step-indicator" aria-label="Claim progress">
         <div class="step active">
@@ -100,47 +105,39 @@
       </div>
 
       <form class="claim-details-form" action="#" method="post" onsubmit="return false;">
-        <div class="claim-details-row">
-          <label class="claim-details-label">What type of case are you filing?</label>
-          <div class="claim-details-input">
-            <label class="form-check"><input type="radio" name="case-type"> Real Estate (e.g., rental disputes, property purchase)</label>
-            <label class="form-check"><input type="radio" name="case-type"> Consumer Protection (e.g., defective products, false advertising)</label>
-            <label class="form-check"><input type="radio" name="case-type"> Employment (e.g., unpaid wages, unfair dismissal)</label>
-            <p id="error-case-type" class="claim-field-error" aria-live="polite"></p>
-          </div>
-        </div>
+        <div id="claim-dynamic-block" class="claim-dynamic-block" aria-live="polite"></div>
 
-        <div class="claim-details-row">
+        <div class="claim-details-row claim-shared-row">
           <label class="claim-details-label">What is the estimated financial impact of this issue?</label>
           <div class="claim-details-input">
-            <label class="form-check"><input type="radio" name="impact"> Less than $1,000</label>
-            <label class="form-check"><input type="radio" name="impact"> $1,000 - $10,000</label>
-            <label class="form-check"><input type="radio" name="impact"> More than $10,000</label>
-            <label class="form-check"><input type="radio" name="impact"> Unknown</label>
+            <label class="form-check"><input type="radio" name="impact" value="lt1k"> Less than $1,000</label>
+            <label class="form-check"><input type="radio" name="impact" value="1k10k"> $1,000 - $10,000</label>
+            <label class="form-check"><input type="radio" name="impact" value="gt10k"> More than $10,000</label>
+            <label class="form-check"><input type="radio" name="impact" value="unk"> Unknown</label>
             <p id="error-impact" class="claim-field-error" aria-live="polite"></p>
           </div>
         </div>
 
-        <div class="claim-details-row">
+        <div class="claim-details-row claim-shared-row">
           <label class="claim-details-label">Do you have a written agreement or contract related to this case?</label>
           <div class="claim-details-input">
-            <label class="form-check"><input type="radio" name="contract"> Yes</label>
-            <label class="form-check"><input type="radio" name="contract"> No</label>
+            <label class="form-check"><input type="radio" name="contract" value="yes"> Yes</label>
+            <label class="form-check"><input type="radio" name="contract" value="no"> No</label>
             <p id="error-contract" class="claim-field-error" aria-live="polite"></p>
           </div>
         </div>
 
-        <div class="claim-details-row">
+        <div class="claim-details-row claim-shared-row">
           <label class="claim-details-label" for="case-description">Please provide a brief description of your case:</label>
           <div class="claim-details-input">
-            <textarea id="case-description" class="form-control claim-details-textarea" maxlength="800" placeholder="(Text box, 800 characters remaining)"></textarea>
+            <textarea id="case-description" class="form-control claim-details-textarea" maxlength="800" placeholder="(Text box, up to 800 characters)"></textarea>
             <p id="error-description" class="claim-field-error" aria-live="polite"></p>
           </div>
         </div>
 
-        <div class="claim-details-row">
+        <div class="claim-details-row claim-shared-row">
           <label class="claim-details-label" for="case-files">
-            Do you have a written agreement or contract related to this case?
+            Supporting documents
             <span class="claim-details-optional">optional</span>
           </label>
           <div class="claim-details-input">
@@ -167,20 +164,52 @@
     </div>
   </footer>
 
+<script src="claim-wizard-topics.js"></script>
 <script>
   (function () {
     const STORAGE_KEY = "consumerRightsClaimDraft";
+    const STEP2 = "任务 1 的你的信息页面.html";
+    const params = new URLSearchParams(window.location.search);
+    const topicSlug = (params.get("topic") || "general").trim().toLowerCase();
+
     const continueBtn = document.getElementById("claim-continue-btn");
     const descriptionInput = document.getElementById("case-description");
     const filesInput = document.getElementById("case-files");
-    const nextPage = "任务 1 的你的信息页面.html";
-    if (!continueBtn || !descriptionInput) return;
+    const dynBlock = document.getElementById("claim-dynamic-block");
+    const topicLine = document.getElementById("claim-wizard-topic-line");
+    if (!continueBtn || !descriptionInput || !dynBlock || !window.CLAIM_WIZARD_TOPICS) return;
 
-    const fields = [
-      { name: "case-type", errorId: "error-case-type", message: "Please select one case type." },
-      { name: "impact", errorId: "error-impact", message: "Please select the estimated financial impact." },
-      { name: "contract", errorId: "error-contract", message: "Please select Yes or No for written agreement." }
-    ];
+    const data = window.CLAIM_WIZARD_TOPICS[topicSlug] || window.CLAIM_WIZARD_TOPICS.general;
+
+    const esc = (s) => {
+      const d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    };
+
+    const radioRow = (name, legend, options, errorId) => {
+      const opts = options
+        .map(
+          (opt, i) =>
+            `<label class="form-check"><input type="radio" name="${name}" value="${String(i)}"> ${esc(opt)}</label>`
+        )
+        .join("");
+      return (
+        `<div class="claim-details-row claim-topic-q">` +
+        `<label class="claim-details-label">${esc(legend)}</label>` +
+        `<div class="claim-details-input">${opts}<p id="${errorId}" class="claim-field-error" aria-live="polite"></p></div>` +
+        `</div>`
+      );
+    };
+
+    dynBlock.innerHTML =
+      radioRow("claim-topic-q1", data.q1.legend, data.q1.options, "error-tq1") +
+      radioRow("claim-topic-q2", data.q2.legend, data.q2.options, "error-tq2");
+
+    topicLine.textContent = "Complaint topic: " + data.title;
+    topicLine.hidden = false;
+
+    const radioNames = ["claim-topic-q1", "claim-topic-q2", "impact", "contract"];
 
     const setError = (id, message) => {
       const el = document.getElementById(id);
@@ -210,7 +239,13 @@
       const next = {
         ...current,
         claimDetails: {
-          caseType: getSelectionText("case-type"),
+          topicSlug,
+          topicTitle: data.title,
+          topicQ1Legend: data.q1.legend,
+          topicQ1: getSelectionText("claim-topic-q1"),
+          topicQ2Legend: data.q2.legend,
+          topicQ2: getSelectionText("claim-topic-q2"),
+          caseType: data.title,
           impact: getSelectionText("impact"),
           hasContract: getSelectionText("contract"),
           description: descriptionInput.value.trim(),
@@ -222,11 +257,19 @@
 
     const validate = (showErrors) => {
       let valid = true;
-      fields.forEach((field) => {
-        const ok = hasSelection(field.name);
-        if (!ok) valid = false;
-        setError(field.errorId, showErrors && !ok ? field.message : "");
-      });
+      const t1 = hasSelection("claim-topic-q1");
+      const t2 = hasSelection("claim-topic-q2");
+      if (!t1) valid = false;
+      if (!t2) valid = false;
+      setError("error-tq1", showErrors && !t1 ? "Please select one option." : "");
+      setError("error-tq2", showErrors && !t2 ? "Please select one option." : "");
+
+      const imp = hasSelection("impact");
+      const con = hasSelection("contract");
+      if (!imp) valid = false;
+      if (!con) valid = false;
+      setError("error-impact", showErrors && !imp ? "Please select the estimated financial impact." : "");
+      setError("error-contract", showErrors && !con ? "Please select Yes or No for written agreement." : "");
 
       const descOk = descriptionInput.value.trim().length > 0;
       if (!descOk) valid = false;
@@ -237,16 +280,24 @@
       return valid;
     };
 
-    document.querySelectorAll('input[name="case-type"], input[name="impact"], input[name="contract"]').forEach((input) => {
-      input.addEventListener("change", () => validate(false));
+    radioNames.forEach((n) => {
+      document.querySelectorAll(`input[name="${n}"]`).forEach((input) => {
+        input.addEventListener("change", () => validate(false));
+      });
     });
     descriptionInput.addEventListener("input", () => validate(false));
     descriptionInput.addEventListener("blur", () => validate(false));
 
+    const nextUrl = () => {
+      const u = new URLSearchParams();
+      u.set("topic", topicSlug);
+      return STEP2 + "?" + u.toString();
+    };
+
     continueBtn.addEventListener("click", () => {
       if (validate(true)) {
         saveDraft();
-        window.location.href = nextPage;
+        window.location.href = nextUrl();
       }
     });
 

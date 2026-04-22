@@ -18,6 +18,7 @@
         <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
           <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
         </button>
+        <div class="utility-la-lang-auth-row" role="group" aria-label="Language and account">
         <div class="utility-la-lang-wrap">
           <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
             <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
@@ -39,6 +40,9 @@
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
           </ul>
+        </div>
+          <a href="登录页面.html" class="utility-la-auth-link">Log in</a>
+          <a href="注册页面.html" class="utility-la-auth-link">Sign up</a>
         </div>
       </div>
     </div>
@@ -111,7 +115,9 @@
         <div class="card" style="margin-bottom:1.5rem;">
           <h3>Claim details</h3>
           <table style="width:100%; font-size:0.95rem;">
-            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted); width:200px;">Case type</td><td id="sum-case-type">-</td></tr>
+            <tr><td style="padding:0.4rem 0; color:var(--color-text-muted); width:220px;">Complaint topic</td><td id="sum-case-type">-</td></tr>
+            <tr id="sum-tq-row-1"><td id="sum-tq-label-1" style="padding:0.4rem 0; color:var(--color-text-muted);">Topic detail 1</td><td id="sum-tq1">-</td></tr>
+            <tr id="sum-tq-row-2"><td id="sum-tq-label-2" style="padding:0.4rem 0; color:var(--color-text-muted);">Topic detail 2</td><td id="sum-tq2">-</td></tr>
             <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Estimated impact</td><td id="sum-impact">-</td></tr>
             <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Written agreement</td><td id="sum-contract">-</td></tr>
             <tr><td style="padding:0.4rem 0; color:var(--color-text-muted);">Description</td><td id="sum-description">-</td></tr>
@@ -140,7 +146,7 @@
         </div>
 
         <div class="confirm-submit-actions" style="display:flex; justify-content:space-between; align-items:center;">
-          <a href="任务 1 的你的信息页面.html" class="btn btn-outline">← Edit information</a>
+          <a href="任务 1 的你的信息页面.html" id="claim-step3-prev" class="btn btn-outline">← Edit information</a>
           <button type="button" id="final-confirm-btn" class="btn btn-primary btn-lg">Confirm submission</button>
         </div>
       </div>
@@ -158,7 +164,7 @@
           </p>
           <div style="display:flex; gap:0.75rem; justify-content:center;">
             <a href="Case Tracker.html" class="btn btn-primary">Track claim</a>
-            <a href="Dashboard.html" class="btn btn-outline">Back to dashboard</a>
+            <a href="主页面.html" class="btn btn-outline">Back to dashboard</a>
           </div>
         </div>
       </div>
@@ -177,6 +183,16 @@
 <script>
   (function () {
     const STORAGE_KEY = "consumerRightsClaimDraft";
+    const step3Params = new URLSearchParams(window.location.search);
+    const topicSlug = (step3Params.get("topic") || "general").trim().toLowerCase();
+    const topicQueryString = () => {
+      const u = new URLSearchParams();
+      u.set("topic", topicSlug);
+      return u.toString();
+    };
+    const prev3 = document.getElementById("claim-step3-prev");
+    if (prev3) prev3.href = "任务 1 的你的信息页面.html?" + topicQueryString();
+
     const fallback = "-";
     let draft = {};
     try {
@@ -195,7 +211,13 @@
       el.textContent = text ? text : fallback;
     };
 
-    setText("sum-case-type", claim.caseType);
+    setText("sum-case-type", claim.topicTitle || claim.caseType);
+    const l1 = document.getElementById("sum-tq-label-1");
+    const l2 = document.getElementById("sum-tq-label-2");
+    if (l1) l1.textContent = claim.topicQ1Legend || "Topic detail 1";
+    if (l2) l2.textContent = claim.topicQ2Legend || "Topic detail 2";
+    setText("sum-tq1", claim.topicQ1);
+    setText("sum-tq2", claim.topicQ2);
     setText("sum-impact", claim.impact);
     setText("sum-contract", claim.hasContract);
     setText("sum-description", claim.description);

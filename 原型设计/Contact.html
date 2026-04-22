@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>联系我们 — Consumer Rights</title>
+  <title>Contact us — Consumer Rights</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="subpage subpage-header-la">
@@ -18,6 +18,7 @@
         <button type="button" class="utility-la-circle utility-la-reset" data-font-reset aria-label="Reset font size to default">
           <svg class="utility-la-reset-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v7h-7"/></svg>
         </button>
+        <div class="utility-la-lang-auth-row" role="group" aria-label="Language and account">
         <div class="utility-la-lang-wrap">
           <button type="button" class="utility-la-language" id="utility-lang-toggle" aria-expanded="false" aria-haspopup="listbox" aria-controls="utility-lang-menu">
             <span class="utility-la-lang-chev" aria-hidden="true">▼</span>
@@ -39,6 +40,9 @@
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="sr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/rs.png" width="20" height="15" alt="" decoding="async"></span><span>Српски</span></button></li>
             <li role="none"><button type="button" class="utility-la-lang-option" role="option" data-lang="hr"><span class="utility-la-flag" aria-hidden="true"><img src="https://flagcdn.com/w20/hr.png" width="20" height="15" alt="" decoding="async"></span><span>Hrvatski</span></button></li>
           </ul>
+        </div>
+          <a href="登录页面.html" class="utility-la-auth-link">Log in</a>
+          <a href="注册页面.html" class="utility-la-auth-link">Sign up</a>
         </div>
       </div>
     </div>
@@ -71,16 +75,16 @@
 
   
 
-  <nav class="breadcrumbs" aria-label="面包屑导航">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
     <div class="container">
-      <a href="主页面.html">首页</a><span>/</span>联系我们
+      <a href="主页面.html">Home</a><span>/</span>Contact us
     </div>
   </nav>
 
   <section class="page-header">
     <div class="container">
-      <h1>联系我们</h1>
-      <p>选择最适合你的方式与我们取得联系</p>
+      <h1>Contact us</h1>
+      <p>Choose the way that works best for you to reach the Professional Legal Team.</p>
     </div>
   </section>
 
@@ -93,8 +97,8 @@
               <path d="M5.2 4.5h2.7l1.3 3.3-1.8 1.8a16.6 16.6 0 0 0 7 7l1.8-1.8 3.3 1.3v2.7c0 .7-.5 1.2-1.2 1.2A14.3 14.3 0 0 1 4 5.7c0-.7.5-1.2 1.2-1.2z"/>
             </svg>
           </div>
-          <h3>电话</h3>
-          <p><strong>1800 000 000</strong><br>工作日 9:00 - 17:00<br>免费拨打</p>
+          <h3>Phone</h3>
+          <p><strong>1800 000 000</strong><br>Monday to Friday, 9:00 am – 5:00 pm<br>Toll-free</p>
         </div>
         <div class="contact-card">
           <div class="icon flat-contact-icon" aria-hidden="true">
@@ -103,8 +107,8 @@
               <path d="m5 8 7 5 7-5"/>
             </svg>
           </div>
-          <h3>邮件</h3>
-          <p><strong>help@rentrights.gov.au</strong><br>通常在2个工作日内回复</p>
+          <h3>Email</h3>
+          <p><strong>help@rentrights.gov.au</strong><br>We usually reply within 2 business days</p>
         </div>
         <div class="contact-card">
           <div class="icon flat-contact-icon" aria-hidden="true">
@@ -113,38 +117,38 @@
               <path d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z"/>
             </svg>
           </div>
-          <h3>办公地址</h3>
-          <p>Level 5, 123 Government St<br>Sydney NSW 2000<br>仅限预约来访</p>
+          <h3>Office address</h3>
+          <p>Level 5, 123 Government St<br>Sydney NSW 2000<br>Visits by appointment only</p>
         </div>
       </div>
 
-      <h2>在线留言</h2>
+      <h2>Send us a message</h2>
       <div style="max-width:640px;">
         <form id="contact-message-form">
           <div class="form-group">
-            <label for="contact-name">姓名</label>
+            <label for="contact-name">Name</label>
             <input type="text" id="contact-name" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="contact-email">邮箱</label>
+            <label for="contact-email">Email</label>
             <input type="email" id="contact-email" class="form-control" required>
           </div>
           <div class="form-group">
-            <label for="contact-subject">主题</label>
+            <label for="contact-subject">Subject</label>
             <select id="contact-subject" class="form-control">
-              <option value="">请选择</option>
-              <option>一般咨询</option>
-              <option>投诉相关</option>
-              <option>技术支持</option>
-              <option>合作建议</option>
-              <option>其他</option>
+              <option value="">Please select</option>
+              <option>General enquiry</option>
+              <option>Complaint about a trader or service</option>
+              <option>Website or accessibility support</option>
+              <option>Media or partnership</option>
+              <option>Other</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="contact-msg">留言内容</label>
+            <label for="contact-msg">Message</label>
             <textarea id="contact-msg" class="form-control" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">提交留言</button>
+          <button type="submit" class="btn btn-primary">Submit message</button>
         </form>
       </div>
     </div>
@@ -153,10 +157,10 @@
   <div id="contact-success-modal" class="overlay-backdrop" style="display:none;">
     <div class="overlay-panel" style="max-width:420px;" role="dialog" aria-modal="true" aria-label="Submission successful">
       <div class="overlay-header">
-        <h2>提交成功</h2>
+        <h2>Submission successful</h2>
       </div>
       <div class="overlay-body">
-        <p style="color:var(--color-text-secondary); margin-bottom:0;">你的留言已成功提交，我们会尽快与你联系。</p>
+        <p style="color:var(--color-text-secondary); margin-bottom:0;">Thank you. Your message has been sent successfully. We will get back to you as soon as we can.</p>
       </div>
       <div class="overlay-footer">
         <button type="button" id="contact-success-confirm" class="btn btn-primary btn-sm">Confirm</button>
@@ -167,8 +171,8 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-bottom">
-        <span>© 2026 Consumer Rights. 保留所有权利。</span>
-        <div><a href="#">隐私政策</a><a href="#">使用条款</a></div>
+        <span>© 2026 Consumer Rights. All rights reserved.</span>
+        <div><a href="Privacy-on-this-site.html">Privacy policy</a><a href="Copyright-and-disclaimer.html">Terms of use</a></div>
       </div>
     </div>
   </footer>
