@@ -295,7 +295,7 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
 .site-logo .logo-icon {
   width: 90px;
   height: 90px;
-  background: url("assets/consumer-rights-logo.png") center/contain no-repeat;
+  background: url("assets/brand-shield-logo.png") center/contain no-repeat;
   color: transparent;
   display: flex;
   align-items: center;
@@ -2701,7 +2701,7 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0;
-  background: url("assets/consumer-rights-logo.png") center/contain no-repeat;
+  background: url("assets/brand-shield-logo.png") center/contain no-repeat;
   border-radius: 0;
   transform: scale(2.2);
   transform-origin: center;
@@ -3345,11 +3345,12 @@ body.page-home-la .la-brand-bar-inner, body.subpage-header-la .la-brand-bar-inne
   padding-left: max(0.5rem, calc(var(--la-hero-align-pad) - 1.5rem - 35px));
   padding-right: clamp(1rem, 3vw, 1.5rem);
   box-sizing: border-box;
-  min-height: clamp(5.75rem, 12vw, 8.5rem);
+  align-items: center;
+  min-height: clamp(4rem, 9vw, 5.5rem);
 }
 
 .la-brand-maroon {
-  background: var(--la-maroon);
+  background: transparent;
   color: #fff;
   padding: 0.5rem 1rem 0.55rem;
   display: flex;
@@ -3361,10 +3362,23 @@ body.page-home-la .la-brand-bar-inner, body.subpage-header-la .la-brand-bar-inne
 body.page-home-la a.la-brand-home, body.subpage-header-la a.la-brand-home {
   text-decoration: none;
   color: #fff;
-  padding: 1rem 2rem 1.1rem;
+  padding: 0.35rem 1.1rem 0.35rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: filter 0.15s ease, background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+body.page-home-la a.la-brand-home::before, body.subpage-header-la a.la-brand-home::before {
+  content: "";
+  width: clamp(4.75rem, 10vw, 6.25rem);
+  height: clamp(4.75rem, 10vw, 6.25rem);
+  background: url("assets/brand-shield-logo.png") center/contain no-repeat;
+  flex-shrink: 0;
+  transform: translate(80px, 12px);
 }
 
 body.page-home-la a.la-brand-home:hover, body.subpage-header-la a.la-brand-home:hover {
@@ -3376,12 +3390,21 @@ body.page-home-la a.la-brand-home:focus-visible, body.subpage-header-la a.la-bra
   outline-offset: 3px;
 }
 
-body.page-home-la a.la-brand-home .la-brand-line1, body.subpage-header-la a.la-brand-home .la-brand-line1 {
-  font-size: 2.1rem;
-}
-
-body.page-home-la a.la-brand-home .la-brand-line2, body.subpage-header-la a.la-brand-home .la-brand-line2 {
-  font-size: 1.44rem;
+/* 仅显示盾牌；文字保留在 DOM 中供读屏（链接已有 aria-label） */
+body.page-home-la a.la-brand-home .la-brand-line1,
+body.page-home-la a.la-brand-home .la-brand-line2,
+body.subpage-header-la a.la-brand-home .la-brand-line1,
+body.subpage-header-la a.la-brand-home .la-brand-line2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 .la-brand-line1 {
@@ -3414,7 +3437,7 @@ body.page-home-la nav.la-brand-teal-nav, body.subpage-header-la nav.la-brand-tea
   justify-content: flex-end;
   flex-wrap: nowrap;
   gap: 0.2rem 0.56rem;
-  padding: 0.8rem 1.2rem 0.8rem 1.7rem;
+  padding: 0.45rem 1.2rem 0.45rem 1.7rem;
   background: transparent !important;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;

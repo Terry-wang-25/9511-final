@@ -1,0 +1,12 @@
+[
+  { "captureId": "e5f9c0ef-a141-408b-9bd0-e2fc363f993a", "file": "workflow-refunds-extended-warranties.html" },
+  { "captureId": "69e3374e-9cf0-4295-b85a-33397561a928", "file": "workflow-refunds-layby-deposits.html" },
+  { "captureId": "e856a11c-29d3-40a7-ba65-20573bddd150", "file": "workflow-refunds-proof-purchase.html" },
+  { "captureId": "66c39cc3-e70d-4470-b991-9b204a9432f5", "file": "workflow-refunds-refund-entitlement.html" },
+  { "captureId": "f06ef71b-4af5-41ef-9b73-0e6a38695365", "file": "workflow-refunds-repair-or-replace.html" },
+  { "captureId": "89cb4c84-562f-4a64-99f1-9e42d435541d", "file": "workflow-scams-online-shopping-scams.html" },
+  { "captureId": "d61faa4e-8991-467c-ab9d-ab4615dc42c2", "file": "workflow-scams-phishing.html" },
+  { "captureId": "247c828c-7fee-4120-ac5e-0c7778bad609", "file": "workflow-scams-pyramid-schemes.html" },
+  { "captureId": "45abf182-e2f1-40a1-b35d-c4e27f7f253a", "file": "workflow-scams-recovery-scams.html" },
+  { "captureId": "1c56d8cd-c154-4528-bb2c-4da61cea2bb8", "file": "workflow-scams-unsafe-injuries.html" }
+]

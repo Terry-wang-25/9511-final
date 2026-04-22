@@ -1,0 +1,13 @@
+[
+  { "captureId": "59b33f82-0013-419c-adf6-a9935a5b28b1", "file": "claim-billing-backbilling.html" },
+  { "captureId": "40d9df5b-f83d-4927-83f5-95a0b3ddc826", "file": "claim-billing-bill-line-by-line.html" },
+  { "captureId": "8632efae-5f16-4ca8-ba8f-31e3c472e0e7", "file": "claim-billing-exit-fees-billing.html" },
+  { "captureId": "7040c986-a257-42ad-8cec-0f6cf21b5f12", "file": "claim-billing-hardship-payment-plans.html" },
+  { "captureId": "1e6302f3-9f5b-4f0d-b8c8-cded518b7664", "file": "claim-billing-utilities-complaints.html" },
+  { "captureId": "cc7ae9b5-27f2-4e21-a1a8-17795e3afa70", "file": "claim-complaints-effective-complaint.html" },
+  { "captureId": "798769e8-8525-4191-bdc3-549a75fa1240", "file": "claim-complaints-evidence-timelines.html" },
+  { "captureId": "a9d422bf-cb61-43fa-a2ae-b15d96b726c9", "file": "claim-complaints-external-schemes.html" },
+  { "captureId": "34230cfa-63bd-4f50-9896-51a518bde5b3", "file": "claim-complaints-internal-dispute.html" },
+  { "captureId": "f18ddda1-ebfc-4cd0-99c8-e9064be86b9f", "file": "claim-complaints-tribunal-court.html" },
+  { "captureId": "be9095c2-2b0b-443c-b09a-2e0041f9bf9a", "file": "claim-contracts-bundled-addons.html" }
+]

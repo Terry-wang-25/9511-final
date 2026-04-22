@@ -1,0 +1,12 @@
+[
+  { "captureId": "31800f89-a709-49c5-8501-29b7589103c4", "file": "workflow-billing-backbilling.html" },
+  { "captureId": "cbbf4a9c-ba9e-40b6-8143-c2a7276bbd87", "file": "workflow-billing-bill-line-by-line.html" },
+  { "captureId": "9ec53669-c0e6-4554-b118-40d00458c446", "file": "workflow-billing-exit-fees-billing.html" },
+  { "captureId": "447384e8-108d-44d0-b96d-457e70ecf265", "file": "workflow-billing-hardship-payment-plans.html" },
+  { "captureId": "92326445-7cd9-478d-ba99-5aaf8c8835bf", "file": "workflow-billing-utilities-complaints.html" },
+  { "captureId": "ec9532c0-6b12-4fa6-8b1c-3c27e3f66da9", "file": "workflow-complaints-effective-complaint.html" },
+  { "captureId": "73fdbeb6-e856-47f1-a371-1cae92d8e337", "file": "workflow-complaints-evidence-timelines.html" },
+  { "captureId": "15a49146-6105-4b5c-93d4-868f927d88b7", "file": "workflow-complaints-external-schemes.html" },
+  { "captureId": "bbfefd5d-082c-45a0-8397-3d1c6b1775b7", "file": "workflow-complaints-internal-dispute.html" },
+  { "captureId": "8a7538be-5eae-478b-a37a-f0ebfb398e00", "file": "workflow-complaints-tribunal-court.html" }
+]

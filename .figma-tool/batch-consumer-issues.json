@@ -1,0 +1,10 @@
+[
+  { "captureId": "ff840c82-3e32-409d-9360-b02607bf91b2", "file": "consumer-issue-refunds.html" },
+  { "captureId": "78c70792-ccfa-47fc-8510-78c1c63056e9", "file": "consumer-issue-misleading.html" },
+  { "captureId": "bbf7a0e9-57f9-418f-9d5b-02688271bce1", "file": "consumer-issue-contracts.html" },
+  { "captureId": "7a9b7e02-b725-4a9c-92f3-9bdf6e59d921", "file": "consumer-issue-tenancy.html" },
+  { "captureId": "803a0177-00bf-4e82-90d0-6abe737f7ccf", "file": "consumer-issue-scams.html" },
+  { "captureId": "8691f989-cb00-4f86-8400-10153d42fade", "file": "consumer-issue-doorstep.html" },
+  { "captureId": "0a2125e2-a68f-4888-b8e9-82e9e5c862cf", "file": "consumer-issue-billing.html" },
+  { "captureId": "f938514d-c038-45ea-b8e5-47403720176a", "file": "consumer-issue-complaints.html" }
+]
