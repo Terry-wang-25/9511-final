@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Suggested Next Steps</title>
+  <title>Your legal next steps — Check My Rights</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="subpage subpage-header-la">
@@ -58,10 +58,11 @@
         </a>
         <nav class="la-brand-teal la-brand-teal-nav" aria-label="Main navigation">
           <a href="主页面.html">Home</a>
-          <a href="Check My Rights - Page 1.html">My issue is about <span class="nav-chev" aria-hidden="true">▾</span></a>
-          <a href="任务 2 的主页面.html">Ways to get help <span class="nav-chev" aria-hidden="true">▾</span></a>
-          <a href="News.html">News <span class="nav-chev" aria-hidden="true">▾</span></a>
-          <a href="Contact.html">Contact us <span class="nav-chev" aria-hidden="true">▾</span></a>
+          <a href="Check My Rights - Page 1.html">Check my rights</a>
+          <a href="任务 2 的主页面.html">Make a claim</a>
+          <a href="Lawyer Profile.html">Legal assistance</a>
+          <a href="Case Tracker.html">Case track</a>
+          <a href="Contact.html">Contact us</a>
         </nav>
       </div>
     </div>
@@ -76,11 +77,11 @@
     <div class="container">
       <div style="max-width:820px; margin:0 auto;">
         <h1>Your Suggested Next Steps</h1>
-        <p style="color:var(--color-text-secondary);">Based on your answers, here is what you can do next.</p>
+        <p style="color:var(--color-text-secondary);">The following is based on your answers: how consumer law processes usually work in practice, and when to use an online complaint on this site or to <a href='Lawyer Profile.html' class='result-inbody-lawyer'>contact a lawyer</a>. This is general information only, not personal legal advice.</p>
 
         <div class="card" style="margin-top:1rem;">
-          <h2 style="font-size:1.3rem;">Recommendation</h2>
-          <ul id="recommendations" style="margin:1rem 0 0 1.25rem; line-height:2;"></ul>
+          <h2 style="font-size:1.3rem; color:var(--color-primary);">Your legal next steps</h2>
+          <ul id="legal-guidance" class="result-legal-guidance" style="margin:1rem 0 0 1.25rem; line-height:1.75; padding-left:0.25rem;"></ul>
         </div>
 
         <div class="card" style="margin-top:1rem;">
@@ -88,10 +89,9 @@
           <ul id="answer-summary" style="margin:1rem 0 0 1.25rem; line-height:1.9;"></ul>
         </div>
 
-        <div style="display:flex; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap;">
-          <a href="任务 1 主页面.html" class="btn btn-primary">Use our claim template</a>
-          <a href="Contact.html" class="btn btn-secondary">Contact support</a>
-          <a href="Check My Rights - Page 1.html" class="btn btn-outline">Start again</a>
+        <div class="result-cta-row" style="display:flex; justify-content:center; align-items:center; gap:0.75rem; margin-top:1.25rem; flex-wrap:wrap;">
+          <a href="任务 1 主页面.html" class="btn btn-primary">Online complaint</a>
+          <a href="Lawyer Profile.html" class="btn btn-secondary">Contact lawyer</a>
         </div>
       </div>
     </div>
@@ -99,7 +99,6 @@
 
   <script>
     const answers = JSON.parse(localStorage.getItem("consumerRightsAnswers") || "{}");
-    const rec = [];
     const summary = [];
 
     const labels = {
@@ -135,38 +134,66 @@
       }
     };
 
-    if (answers.q1 && answers.q2 && answers.q3 && answers.q4 && answers.q5) {
-      const isFaulty = answers.q1 === "faulty";
-      const isRecent = answers.q2 === "lt_7" || answers.q2 === "7_30";
-      const wantsRefund = answers.q5 === "refund";
-      const notContacted = answers.q4 === "not_contacted";
-
-      if (isFaulty && isRecent && wantsRefund && notContacted) {
-        rec.push("You may be able to ask for a refund.");
-        rec.push("First, contact the business.");
-        rec.push("Prepare proof of purchase and photos.");
-        rec.push("Use our claim template.");
-      } else {
-        if (answers.q1 === "faulty") rec.push("You may have rights to a repair, replacement, or refund.");
-        if (answers.q1 === "not_delivered") rec.push("Ask the business for delivery proof or a full refund.");
-        if (answers.q1 === "different") rec.push("Request a remedy because the item was not as described.");
-        if (answers.q1 === "changed_mind") rec.push("A refund may depend on the store's return policy.");
-
-        if (answers.q2 === "gt_30") rec.push("Because more time has passed, gather strong supporting evidence.");
-        if (answers.q4 === "not_contacted") rec.push("First, contact the business directly and clearly explain the issue.");
-        if (answers.q4 === "refused" || answers.q4 === "no_reply") rec.push("Escalate your complaint using a formal written claim.");
-
-        if (answers.q5 === "refund") rec.push("State clearly that your preferred outcome is a refund.");
-        if (answers.q5 === "repair") rec.push("Ask for a repair with a clear expected timeframe.");
-        if (answers.q5 === "replacement") rec.push("Request a replacement item of equivalent value.");
-        if (answers.q5 === "not_sure") rec.push("We can help you choose the best remedy based on your documents.");
-
-        rec.push("Keep screenshots, receipts, order details, and message history.");
-        rec.push("Use our claim template if the business does not resolve the issue.");
+    function buildLegalGuidance(a) {
+      if (!a.q1 || !a.q2 || !a.q3 || !a.q4 || !a.q5) {
+        return [
+          "<li>Complete <strong>all five questions</strong> so this page can show whether an <strong>Online complaint</strong> on this site is usually appropriate first, or whether you should <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> (for example when key facts, amounts, or time limits are unclear).</li>"
+        ];
       }
-    } else {
-      rec.push("We could not find complete answers.");
-      rec.push("Please complete all 5 questions so we can provide accurate next steps.");
+
+      const isGuaranteeStyle =
+        a.q1 === "faulty" || a.q1 === "not_delivered" || a.q1 === "different";
+      const isChangeMind = a.q1 === "changed_mind";
+      const notContacted = a.q4 === "not_contacted";
+      const businessBlocked = a.q4 === "refused" || a.q4 === "no_reply";
+      const older = a.q2 === "gt_30" || a.q2 === "not_sure";
+      const lines = [];
+
+      if (isGuaranteeStyle) {
+        lines.push(
+          "<li>Under the <strong>Australian Consumer Law (ACL)</strong>, the <strong>consumer guarantees</strong> can apply in situations like yours (fault, non-delivery, or not as described). The remedy is often a <strong>repair, replacement, or refund</strong>, depending on whether the problem is a &ldquo;major failure&rdquo; and on the full facts. The text here only helps you pick a <strong>process</strong> (online complaint vs lawyer), not decide the legal outcome in detail.</li>"
+        );
+        if (notContacted || a.q4 === "not_sure") {
+          lines.push(
+            "<li><strong>Online complaint (this site):</strong> usually appropriate to prepare a <strong>clear, structured</strong> ACL-based request in writing and keep a record. The law generally expects you to <strong>give the supplier a fair chance to fix the problem</strong> first, except where that is not reasonable (for example some safety or total-loss situations).</li>"
+          );
+        } else if (businessBlocked) {
+          lines.push(
+            "<li>Because the business has <strong>refused to help</strong> or <strong>not answered</strong>, the next consumer-law step is usually a <strong>formal written</strong> complaint with dates, amounts, and evidence. The <strong>Online complaint</strong> path is suited to that escalation. <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if the amount is <strong>large</strong>, you may go to a <strong>tribunal or court</strong>, there is <strong>injury or safety risk</strong>, or you are unsure about <strong>time limits</strong>.</li>"
+          );
+        } else {
+          lines.push(
+            "<li>Continue with a <strong>clear written</strong> position to the business, then use <strong>Online complaint</strong> to escalate on the record if it stays unresolved. Use <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if the matter is <strong>complex or high-value</strong> or you need document-specific advice.</li>"
+          );
+        }
+        if (a.q1 === "not_delivered" && notContacted) {
+          lines.push(
+            "<li><strong>Non-delivery</strong> under the ACL: you will generally be looking for the goods to be supplied or a <strong>refund</strong> in line with the facts. A lawyer is more important if the seller has <strong>vanished</strong>, the loss is <strong>very large</strong>, or you need a <strong>chargeback, tribunal, or court</strong> strategy—your answers suggest starting with a documented approach via <strong>Online complaint</strong> unless those red flags are present.</li>"
+          );
+        }
+        if (a.q1 === "faulty" && (a.q5 === "refund" || a.q5 === "replacement" || a.q5 === "repair")) {
+          lines.push(
+            "<li>Your stated outcome (repair / replacement / refund) is one of the standard consumer remedies, but <strong>which</strong> remedy applies is a legal question. You can use <strong>Online complaint</strong> to set out your request under the guarantees; <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if the supplier disputes &ldquo;major failure&rdquo; or the correct remedy in your case.</li>"
+          );
+        }
+        if (older) {
+          lines.push(
+            "<li>Because the problem is <strong>older or the timing is uncertain</strong>, <strong>evidence and limitation periods</strong> matter. <strong>Online complaint</strong> is still useful to <strong>document</strong> the story on a fixed date. <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if you are close to a possible deadline or the timeline is messy.</li>"
+          );
+        }
+        lines.push(
+          "<li><strong>When to use each button:</strong> use <strong>Online complaint</strong> for a typical ACL track where you are lodging or escalating a clear consumer claim through this system. Use <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if you need individual advice, face court/tribunal, or have a large or non-standard case.</li>"
+        );
+      } else if (isChangeMind) {
+        lines.push(
+          "<li><strong>Change of mind</strong> is <strong>not</strong> covered by the consumer guarantees. Whether you can return or exchange goods depends on <strong>contract and policy</strong>, and sometimes on <strong>misleading conduct</strong> or <strong>unfair terms</strong>, which need tailored legal review.</li>"
+        );
+        lines.push(
+          "<li><strong>Online complaint</strong> can still be used to put a <strong>formal, written</strong> request to the trader. Use <a href='Lawyer Profile.html' class='result-inbody-lawyer'>Contact a lawyer</a> if you think you were misled, the contract is unfair, or a significant amount of money is at stake.</li>"
+        );
+      }
+
+      return lines;
     }
 
     const summaryPairs = [
@@ -181,7 +208,7 @@
       summary.push(`${k}: ${v || "Not answered"}`);
     });
 
-    document.getElementById("recommendations").innerHTML = rec.map(i => `<li>${i}</li>`).join("");
+    document.getElementById("legal-guidance").innerHTML = buildLegalGuidance(answers).join("");
     document.getElementById("answer-summary").innerHTML = summary.map(i => `<li>${i}</li>`).join("");
   </script>
 <script src="site-preferences.js"></script>

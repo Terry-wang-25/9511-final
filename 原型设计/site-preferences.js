@@ -546,6 +546,7 @@
 
     searchInputs.forEach((input) => {
       if (input.dataset.voiceWired === "1") return;
+      if (!input.parentNode) return;
       input.dataset.voiceWired = "1";
 
       const wrap = document.createElement("div");
@@ -598,19 +599,32 @@
     });
   }
 
+  const FLOATING_AI_BUTTON_HTML = `
+      <button type="button" class="floating-ai-trigger" aria-label="Contact our AI assistant" title="Contact our AI assistant">
+        <span class="floating-ai-glyph-wrap" aria-hidden="true">
+          <span class="floating-ai-emoji" aria-hidden="true">🤖</span>
+          <span class="floating-ai-label">Contact our<br>AI assistant</span>
+        </span>
+      </button>`;
+
   function wireFloatingAiAssistant() {
-    if (document.getElementById("floating-ai-assistant")) return;
+    const prior = document.getElementById("floating-ai-assistant");
+    if (prior && prior.getAttribute("data-floating-ai-rev") === "6") {
+      return;
+    }
+    if (prior) {
+      prior.remove();
+    }
+    if (!document.body) {
+      return;
+    }
 
     const root = document.createElement("div");
     root.id = "floating-ai-assistant";
     root.className = "floating-ai-assistant";
+    root.setAttribute("data-floating-ai-rev", "6");
     root.innerHTML = `
-      <button type="button" class="floating-ai-trigger" aria-label="Open AI legal assistant">
-        <img
-          src="file:///C:/Users/tiany/.cursor/projects/c-Users-tiany-Desktop-9511/assets/c__Users_tiany_AppData_Roaming_Cursor_User_workspaceStorage_56284b04bad31fa997134d1aa5c03efd_images__2C83D9CF-86E9-48BF-B5FA-3B628E84D7A4_-c1bce5a3-8fbe-411f-942f-4ce508f2aa4f.png"
-          alt="AI Robot"
-          class="floating-ai-avatar">
-      </button>
+      ${FLOATING_AI_BUTTON_HTML}
       <div class="floating-ai-panel" role="dialog" aria-modal="false" aria-label="AI legal chatbot panel">
         <div class="floating-ai-panel-top">
           <button type="button" class="floating-ai-close" aria-label="Close chatbot">×</button>
@@ -708,6 +722,22 @@
     syncInteractivity();
   }
 
+  function wireGlobalChatFab() {
+    if (!document.body) {
+      return;
+    }
+    if (document.getElementById("global-la-chat-fab")) {
+      return;
+    }
+    document.querySelectorAll("a.la-chat-fab:not(#global-la-chat-fab)").forEach((el) => el.remove());
+    const a = document.createElement("a");
+    a.id = "global-la-chat-fab";
+    a.className = "la-chat-fab";
+    a.href = "Overlay - Chatbot.html";
+    a.innerHTML = 'Chat with us <span class="la-chat-ico" aria-hidden="true">💬</span>';
+    document.body.appendChild(a);
+  }
+
   function localizeByLanguage(lang) {
     const code = (lang || "en").toLowerCase();
     const isChinese = code.startsWith("zh");
@@ -752,18 +782,40 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function runSafe(label, fn) {
+    try {
+      fn();
+    } catch (err) {
+      console.error(`[site-preferences] ${label}`, err);
+    }
+  }
+
+  function bootSitePreferences() {
     consumeQueryPrefs();
     const prefs = getPrefs();
     applyPrefs(prefs);
     localizeByLanguage(prefs.language);
-    wireToolLinksWithReturn();
-    wireUtilityFontSteppers();
-    wireUtilityFontReset();
-    wireUtilityLangDropdown();
-    wireListenButton();
-    wireVoiceSearch();
-    wireEnterToConfirm();
-    wireFloatingAiAssistant();
+    runSafe("wireToolLinksWithReturn", wireToolLinksWithReturn);
+    runSafe("wireUtilityFontSteppers", wireUtilityFontSteppers);
+    runSafe("wireUtilityFontReset", wireUtilityFontReset);
+    runSafe("wireUtilityLangDropdown", wireUtilityLangDropdown);
+    runSafe("wireListenButton", wireListenButton);
+    runSafe("wireVoiceSearch", wireVoiceSearch);
+    runSafe("wireEnterToConfirm", wireEnterToConfirm);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    runSafe("wireFloatingAiAssistant", wireFloatingAiAssistant);
+    runSafe("wireGlobalChatFab", wireGlobalChatFab);
+    runSafe("bootSitePreferences", bootSitePreferences);
+  });
+
+  window.addEventListener("load", () => {
+    if (!document.getElementById("floating-ai-assistant")) {
+      runSafe("wireFloatingAiAssistant(fallback)", wireFloatingAiAssistant);
+    }
+    if (!document.getElementById("global-la-chat-fab")) {
+      runSafe("wireGlobalChatFab(fallback)", wireGlobalChatFab);
+    }
   });
 })();

@@ -1469,7 +1469,14 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
 .claim-details-form {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.4rem;
+}
+
+/* Topic-specific Q1/Q2: stacked in one wrapper — needs its own row gap (not the form flex gap) */
+.claim-dynamic-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 }
 
 .claim-details-row {
@@ -1487,7 +1494,7 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
 }
 
 .claim-details-input .form-check {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.55rem;
 }
 
 .claim-details-textarea {
@@ -1688,13 +1695,16 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
 .floating-ai-assistant {
   position: fixed;
   right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1190;
+  bottom: 6.5rem;
+  top: auto;
+  left: auto;
+  transform: none;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 0.55rem;
+  pointer-events: auto;
 }
 
 .floating-ai-assistant.disabled {
@@ -1710,7 +1720,7 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
   background: #fff;
   color: #6f1733;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -1718,12 +1728,38 @@ body.subpage-header-la .utility-bar .container.utility-bar-inner--la {
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.24);
 }
 
-.floating-ai-avatar {
+.floating-ai-glyph-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  padding: 0.25rem 0.2rem 0.35rem;
+  box-sizing: border-box;
+  gap: 0.05rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.floating-ai-emoji {
+  font-size: 1.45rem;
+  line-height: 1;
   display: block;
+  font-style: normal;
+  user-select: none;
+}
+
+.floating-ai-label {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  color: #6f1733;
+  user-select: none;
+  max-width: 6.2rem;
+  text-wrap: balance;
 }
 
 .floating-ai-panel {
@@ -3305,7 +3341,8 @@ body.page-home-la .la-brand-bar-inner, body.subpage-header-la .la-brand-bar-inne
   max-width: none;
   width: 100%;
   margin: 0;
-  padding-left: var(--la-hero-align-pad);
+  /* 略向左移品牌块：比 hero 左对齐略小一档，仍保留边距不贴边 */
+  padding-left: max(0.5rem, calc(var(--la-hero-align-pad) - 1.5rem - 35px));
   padding-right: clamp(1rem, 3vw, 1.5rem);
   box-sizing: border-box;
   min-height: clamp(5.75rem, 12vw, 8.5rem);
@@ -3375,20 +3412,24 @@ body.page-home-la nav.la-brand-teal-nav, body.subpage-header-la nav.la-brand-tea
   flex: 1;
   min-width: 0;
   justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 0.2rem 0.35rem;
-  padding: 0.55rem 1rem 0.55rem 1.25rem;
+  flex-wrap: nowrap;
+  gap: 0.2rem 0.56rem;
+  padding: 0.8rem 1.2rem 0.8rem 1.7rem;
   background: transparent !important;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 body.page-home-la nav.la-brand-teal-nav a, body.subpage-header-la nav.la-brand-teal-nav a {
   color: #fff !important;
-  font-size: clamp(1.64rem, 2.7vw, 1.96rem);
+  font-size: clamp(1.44rem, 2.1vw, 1.84rem);
   font-weight: 700;
   text-decoration: none;
-  padding: 0.55rem 0.75rem;
-  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 4px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 body.page-home-la nav.la-brand-teal-nav a:hover, body.subpage-header-la nav.la-brand-teal-nav a:hover {
@@ -3397,13 +3438,13 @@ body.page-home-la nav.la-brand-teal-nav a:hover, body.subpage-header-la nav.la-b
 }
 
 body.page-home-la nav.la-brand-teal-nav a:focus-visible, body.subpage-header-la nav.la-brand-teal-nav a:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
+  outline: 4px solid #fff;
+  outline-offset: 4px;
 }
 
 body.page-home-la nav.la-brand-teal-nav .nav-chev, body.subpage-header-la nav.la-brand-teal-nav .nav-chev {
   font-size: 0.65em;
-  margin-left: 0.12rem;
+  margin-left: 0.24rem;
   opacity: 0.9;
 }
 
@@ -3639,6 +3680,42 @@ body.page-home-la .la-ways > .container {
   font-weight: 400;
 }
 
+/* Make a claim: choose issue (dashboard) — reuses .la-prob-grid from home */
+.claim-dashboard-page.page-content {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.claim-dashboard-lead {
+  margin: 0 0 1.35rem;
+  max-width: 100%;
+  color: #3f3f46;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.claim-dashboard-back-wrap {
+  margin: 1.25rem 0 0;
+  padding-top: 0.25rem;
+}
+
+/* Check My Rights result: in-body “Contact a lawyer” links */
+a.result-inbody-lawyer {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a.result-inbody-lawyer:hover,
+a.result-inbody-lawyer:focus-visible {
+  color: var(--color-primary-hover, var(--color-primary));
+  text-decoration-thickness: 2px;
+}
 
 /* Ways to help */
 .la-ways {
@@ -3664,6 +3741,24 @@ body.page-home-la .la-ways > .container {
   padding: 2.25rem 2.025rem;
   border-radius: 2px;
   min-height: 16.5rem;
+}
+
+a.la-way-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+a.la-way-card:hover {
+  background: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+
+a.la-way-card:focus-visible {
+  outline: 3px solid var(--la-teal);
+  outline-offset: 3px;
 }
 
 .la-way-icon {
@@ -4154,12 +4249,13 @@ body.page-home-la .la-news-date {
   }
 }
 
-/* Chat FAB */
-.la-chat-fab {
+/* Chat FAB（与 #floating-ai-assistant 同由 site-preferences.js 在任意页注入） */
+.la-chat-fab,
+#global-la-chat-fab {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
-  z-index: 500;
+  z-index: 9990;
   background: var(--la-maroon);
   color: #fff !important;
   text-decoration: none !important;
@@ -4982,15 +5078,21 @@ ol.la-workflow-steps > li::before {
   margin-top: 0.35rem;
 }
 
+.claim-topic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.85rem;
+}
+
 .claim-topic-form .form-group {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0;
 }
 
 .claim-topic-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .claim-topic-actions .btn-lg {
@@ -5000,7 +5102,7 @@ ol.la-workflow-steps > li::before {
 }
 
 .claim-topic-note {
-  margin-top: 1.25rem;
+  margin-top: 0;
   font-size: 0.85rem;
   color: var(--color-text-muted);
 }
